@@ -53,12 +53,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     el.href = `https://wa.me/${cleanNum}?text=Hi%20Godwin%20Public%20School%2C%20I%20have%20an%20admissions%20query.`;
   });
 
-  // Dynamic Hero Titles if present
+  // Dynamic Hero Titles & Cloudinary Images
   const heroTitleEl = document.querySelector('[data-cms="heroTitle"]');
   if (heroTitleEl && data.heroTitle) heroTitleEl.textContent = data.heroTitle;
 
   const heroSubEl = document.querySelector('[data-cms="heroSubtitle"]');
   if (heroSubEl && data.heroSubtitle) heroSubEl.textContent = data.heroSubtitle;
+
+  const heroImg1 = document.querySelector('[data-cms="heroImage1"]');
+  if (heroImg1 && data.cloudinaryCampusHero1) heroImg1.src = data.cloudinaryCampusHero1;
+
+  const heroImg2 = document.querySelector('[data-cms="heroImage2"]');
+  if (heroImg2 && data.cloudinaryCampusHero2) heroImg2.src = data.cloudinaryCampusHero2;
 
   // 2. Pure Tailwind Hero Auto-Slider
   const heroSlider = document.getElementById('pure-tw-hero-slider');
