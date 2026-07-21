@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>About Us | Godwin Public School</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface": "#F8F9FA",
+            "on-surface": "#2B303A",
+            "tertiary": "#222421",
+            "on-background": "#2B303A",
+            "error-container": "#ffdad6",
+            "secondary": "#E0701B",
+            "on-error": "#ffffff",
+            "surface-variant": "#e4e8e1",
+            "surface-container-high": "#eae8e7",
+            "surface-container-low": "#f6f8f4",
+            "surface-dim": "#dcd9d9",
+            "on-primary": "#ffffff",
+            "inverse-primary": "#8cd4ad",
+            "on-secondary-fixed": "#271900",
+            "inverse-surface": "#303030",
+            "inverse-on-surface": "#f3f0f0",
+            "secondary-fixed": "#fef08a",
+            "on-surface-variant": "#4A5160",
+            "surface-container-highest": "#e4e2e1",
+            "surface-tint": "#0D4234",
+            "on-primary-container": "#8cd4ad",
+            "outline-variant": "#c4c6d0",
+            "secondary-container": "#F98D37",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed-variant": "#072C22",
+            "primary": "#0D4234",
+            "primary-container": "#072C22",
+            "error": "#ba1a1a",
+            "surface-bright": "#F8F9FA",
+            "secondary-fixed-dim": "#facc15",
+            "surface-container": "#f0f4ee",
+            "outline": "#747780",
+            "tertiary-fixed": "#e3e3de",
+            "tertiary-container": "#373936",
+            "background": "#F8F9FA",
+            "on-error-container": "#93000a",
+            "primary-fixed-dim": "#8cd4ad",
+            "on-primary-fixed": "#012614",
+            "primary-fixed": "#bcf0d3",
+            "on-secondary-container": "#C65D0F",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed": "#1a1c19",
+            "on-secondary-fixed-variant": "#E0701B",
+            "tertiary-fixed-dim": "#c6c7c2",
+            "on-tertiary-fixed-variant": "#454744",
+            "surface-container-lowest": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "section-gap": "80px",
+            "base": "8px",
+            "margin-desktop": "48px",
+            "gutter": "24px",
+            "margin-mobile": "16px",
+            "container-max": "1200px"
+          },
+          "fontFamily": {
+            "sans": ["Libre Franklin", "sans-serif"],
+            "body-md": ["Libre Franklin", "sans-serif"],
+            "headline-lg-mobile": ["Libre Franklin", "sans-serif"],
+            "caption": ["Libre Franklin", "sans-serif"],
+            "label-md": ["Libre Franklin", "sans-serif"],
+            "headline-md": ["Libre Franklin", "sans-serif"],
+            "headline-lg": ["Libre Franklin", "sans-serif"],
+            "body-lg": ["Libre Franklin", "sans-serif"],
+            "headline-display": ["Libre Franklin", "sans-serif"]
+          },
+          "fontSize": {
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-display": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+
+    .seal-watermark {
+      opacity: 0.03;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .custom-check::before {
+      content: "\e5ca";
+      font-family: 'Material Symbols Outlined';
+      color: #E0701B;
+      /* Secondary/Gold */
+      margin-right: 8px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-surface text-on-background font-body-md antialiased">
+  <!-- Modular Header Navigation -->
+  <div id="navbar-placeholder"></div>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden py-32 bg-surface">
+    <div class="absolute inset-0 flex items-center justify-center seal-watermark">
+      <span class="material-symbols-outlined text-[400px]">school</span>
+    </div>
+    <div class="max-w-container-max mx-auto px-margin-desktop text-center relative z-10">
+      <span class="text-secondary font-label-md text-label-md tracking-widest uppercase mb-4 block">Maintained by Shri Kalki Educational Trust</span>
+      <h1 class="text-headline-display font-headline-display text-primary max-w-4xl mx-auto">About Godwin Public School</h1>
+      <p class="mt-6 text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+        A co-educational institution from Kindergarten to Matriculation, originated in 1997 and maintained by Shri Kalki Educational Trust for over 29 years.
+      </p>
+    </div>
+  </section>
+  <!-- Our Story Section -->
+  <section class="py-section-gap bg-surface-container-lowest">
+    <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+      <div class="lg:col-span-5 relative">
+        <div class="aspect-[4/5] bg-surface-container rounded-lg overflow-hidden border border-outline-variant shadow-sm group">
+          <img class="w-full h-full object-cover filter sepia-[0.3] group-hover:sepia-0 transition-all duration-700"
+            data-alt="Godwin Public School campus view in Sahakar Nagar, Bengaluru"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqm6AuGgiJOPufLLt8O-FgVtwLG5GUdzPmge_kvF9K4p6QabG2baJvMIczq_QU671I486ILr9WsKi-RGTJ9Dk3MnbLlyoxe9IT8eQX1XWkNBdqZRGAN4YaxtZLo2A856VIJxfSlKKhTkFyAdWgDBzQGzOQ_8sTdUKssyXFpsP6PWfqTuqm1ixXtE8gKgBCvavaOnNGgKjDvqTCjyCuJ02vVdWeH9VkY68F11Gl_FMIspq9uUgeSyRNd431w8QcaE0wsdExI_e1ep0" />
+        </div>
+        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary rounded-lg flex items-center justify-center p-4 shadow-xl">
+          <span class="text-on-secondary font-headline-md text-headline-md text-center leading-tight">29+ Years</span>
+        </div>
+      </div>
+      <div class="lg:col-span-7 lg:pl-12">
+        <h2 class="text-headline-lg font-headline-lg text-primary mb-8">The Journey &amp; Educational Philosophy</h2>
+        <div class="space-y-6 text-body-md font-body-md text-on-surface-variant">
+          <p>
+            Godwin Public School is a co-educational institution from Kindergarten to Matriculation, originated in 1997 and maintained by Shri Kalki Educational Trust for over 29 years. In academics, the school has been consistently producing cent percent (100%) results in SSLC exams and receiving awards every year from the Government of Karnataka.
+          </p>
+          <p>
+            Each class is filled with limited seats maintaining a student-teacher ratio of 20 : 1, ensuring individual attention to each student. Children with severe learning needs are given special attention, gradually integrating them into the mainstream curriculum.
+          </p>
+          <ul class="space-y-4 pt-4">
+            <li class="custom-check flex items-start">Consistently producing 100% SSLC pass results with Government of Karnataka awards.</li>
+            <li class="custom-check flex items-start">Strict 20 : 1 student-teacher ratio with individual care &amp; inclusive learning support.</li>
+            <li class="custom-check flex items-start">Concept-based teaching focused on developing social consciousness &amp; moral integrity.</li>
+            <li class="custom-check flex items-start">Annual Day performing arts celebrations at Bangalore's iconic Chowdaiah Memorial Hall.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Mission, Vision, & Values -->
+  <section class="py-section-gap bg-surface">
+    <div class="max-w-container-max mx-auto px-margin-desktop">
+      <div class="text-center mb-16">
+        <h2 class="text-headline-lg font-headline-lg text-primary">Ardent Aim &amp; Motto</h2>
+        <div class="h-1 w-20 bg-secondary mx-auto mt-4 rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <!-- Motto -->
+        <div class="bg-surface-container-lowest p-10 border border-secondary/20 rounded-lg group hover:border-secondary transition-all duration-300">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-white text-3xl">flag</span>
+          </div>
+          <h3 class="text-headline-md font-headline-md text-primary mb-4">Our Ardent Motto</h3>
+          <p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+            Character, Decorum, Dedication, Determination, Discipline &amp; Duty are the most important aims of Godwin Public School.
+          </p>
+        </div>
+        <!-- Aim -->
+        <div class="bg-surface-container-lowest p-10 border border-secondary/20 rounded-lg group hover:border-secondary transition-all duration-300">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-white text-3xl">visibility</span>
+          </div>
+          <h3 class="text-headline-md font-headline-md text-primary mb-4">Educational Aim</h3>
+          <p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+            To impart to the younger generation a sound and liberal education, blending them with the highest spiritual and cultural traditions of our country.
+          </p>
+        </div>
+        <!-- Values -->
+        <div class="bg-surface-container-lowest p-10 border border-secondary/20 rounded-lg group hover:border-secondary transition-all duration-300">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-white text-3xl">balance</span>
+          </div>
+          <h3 class="text-headline-md font-headline-md text-primary mb-4">Child-Centric Aims</h3>
+          <p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+            To help every child strive to do their best, value their place in society, and develop enquiring minds with rational questioning abilities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Leadership Team -->
+  <section class="py-section-gap bg-surface-container-low">
+    <div class="max-w-container-max mx-auto px-margin-desktop">
+      <div class="mb-16">
+        <h2 class="text-headline-lg font-headline-lg text-primary">Institutional Leadership</h2>
+        <p class="text-body-lg font-body-lg text-on-surface-variant mt-4">The visionaries steering the institution
+          toward future academic horizons.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+        <!-- Leader 1 -->
+        <div class="flex flex-col gap-4">
+          <div
+            class="aspect-square bg-surface-container rounded-lg overflow-hidden border border-outline-variant grayscale hover:grayscale-0 transition-all duration-500">
+            <img class="w-full h-full object-cover"
+              data-alt="A professional studio portrait of a senior academic leader, a woman in her 50s, wearing a sophisticated dark blazer. The lighting is soft and flattering with a clean, neutral background. Her expression is confident and welcoming, embodying leadership and scholarly authority. High-end corporate photography style."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCipksNBCgHZ2vM7CI7WKes4iXBC9atNuUeLk_QtHQ0yEsXBEruHfK7IuR-V2zbZGCFJKMx_jtKVozucOalAd9WjrnI_sVpUDtzMFAh_xYtwMOTyvbpB0b-lYE0gSdqO7KYS8ybDCeJMpI4w3mlQTRSZ7AoGqWAofW563XwtYmAy-Blxoy8YyNmkechRpBiUhO99fPm8DK4TG7tpnaGnnCc5yqQEyKhF0X_QXxrabee1Eb3ne3phoKbysAox3DglIwvi1mcmwZl0AE" />
+          </div>
+          <div>
+            <h4 class="text-headline-md font-headline-md text-primary">Dr. Evelyn Sterling</h4>
+            <p class="text-label-md font-label-md text-secondary uppercase tracking-wider mb-2">Principal &amp; Academic
+              Head</p>
+            <p class="text-caption font-caption text-on-surface-variant">Former Dean with 30 years of experience in
+              educational reform and pedagogical innovation.</p>
+          </div>
+        </div>
+        <!-- Leader 2 -->
+        <div class="flex flex-col gap-4">
+          <div
+            class="aspect-square bg-surface-container rounded-lg overflow-hidden border border-outline-variant grayscale hover:grayscale-0 transition-all duration-500">
+            <img class="w-full h-full object-cover"
+              data-alt="A professional headshot of a middle-aged male administrator in a tailored navy blue suit and silk tie. He has a distinguished look with a slight smile, set against a blurred background of a modern academic library. The image conveys trust, professional excellence, and institutional heritage."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM0QHXNytZRO4PoIOsgE1Xrhax_qf1nTe6irj9JBFcxfRz1hMyNObGxsKxeCafUrQx-3QvWA2j1Ni0rRL_YH9KWPGqJSxufBkSm0MrPUryrXCIKBrryuEvi4O_LrPfosKDD90BtyvHtODD-6cdI_x75hF7qvUpyeO3kP3rNCEuvaluX7rZErl5rJRJ7jtznXsds8BnI02Qt7YW1flvxykLPagGuS3kEd06Y8NdPKjeMhf56GldCCrJc6COyQCv5-xfLzPXhdQGpOY" />
+          </div>
+          <div>
+            <h4 class="text-headline-md font-headline-md text-primary">Mr. Rajiv Mehta</h4>
+            <p class="text-label-md font-label-md text-secondary uppercase tracking-wider mb-2">Managing Director</p>
+            <p class="text-caption font-caption text-on-surface-variant">Strategic visionary focused on institutional
+              growth and global academic collaborations.</p>
+          </div>
+        </div>
+        <!-- Leader 3 -->
+        <div class="flex flex-col gap-4">
+          <div
+            class="aspect-square bg-surface-container rounded-lg overflow-hidden border border-outline-variant grayscale hover:grayscale-0 transition-all duration-500">
+            <img class="w-full h-full object-cover"
+              data-alt="Portrait of a female educator in professional attire, looking directly at the camera with a calm and intellectual expression. The lighting is cinematic yet professional, with subtle shadows that add depth. The aesthetic is clean, modern, and high-quality, representing academic excellence."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrf1YQHIIARPwuHnhfIbdTWCIVMNSxiCOuRNLW3kVr5uGunjW4VMChCJvW4Zq0UxWpMPbIOvW7-sz9N4IMhwmYW3AZlHT7Bum8gowyILpkOugaTZrj-vguOYOdpcpju1wqDGm4kbRolCmO_mho85gq9-cmq-9QTZicqlyFEgQg37wN1XOq1m56mWi__h9LMwj3dw3SFAK9HZCluTtbfQBZRTUPfprc-eHWKBYj3HW-6phJH8Hg2ycqVqlLTykkxLBxm3Emxab-bQE" />
+          </div>
+          <div>
+            <h4 class="text-headline-md font-headline-md text-primary">Dr. Sarah Johnson</h4>
+            <p class="text-label-md font-label-md text-secondary uppercase tracking-wider mb-2">Director of Academics
+            </p>
+            <p class="text-caption font-caption text-on-surface-variant">PhD in Educational Psychology, leading
+              curriculum development and teacher excellence programs.</p>
+          </div>
+        </div>
+        <!-- Leader 4 -->
+        <div class="flex flex-col gap-4">
+          <div
+            class="aspect-square bg-surface-container rounded-lg overflow-hidden border border-outline-variant grayscale hover:grayscale-0 transition-all duration-500">
+            <img class="w-full h-full object-cover"
+              data-alt="A sharp, professional portrait of a senior male board member in a charcoal suit. He is standing in a brightly lit, modern school hallway with soft focus on the background. The lighting emphasizes clean lines and a premium, institutional feel. The mood is authoritative and reassuring."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhMrN8YtS1cXUZzS5NK34reB6q2g6eW8LFN969Ad7mUl0455Z9kCggRpCuIPaMFck1vPFFy8snlHkKtDyWPeIzgh-W8oqa-mGmSkSS5YQX7x1upNwrh7uPUs_Tb64pjNLmdq0T5cLm4KNPWKhMbBKR6_L8eiKqKESttKG5W2cTp_iISiox9-TW6JQhzwl5Jg8m-5YGqBEiifOvLPFtf72u7llAMrBPC8qqz_JCkUgOvyVPT7LngxR6O1tUUn4lTkzArW6pYuyini0" />
+          </div>
+          <div>
+            <h4 class="text-headline-md font-headline-md text-primary">Adv. Vikram Singh</h4>
+            <p class="text-label-md font-label-md text-secondary uppercase tracking-wider mb-2">Legal &amp; Governance
+              Head</p>
+            <p class="text-caption font-caption text-on-surface-variant">Ensuring the highest standards of institutional
+              ethics and compliance since the school's inception.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Accreditations Row -->
+  <section class="py-16 bg-surface border-t border-b border-outline-variant">
+    <div class="max-w-container-max mx-auto px-margin-desktop">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-12 opacity-70">
+        <div class="flex items-center gap-4 text-primary grayscale hover:grayscale-0 transition-all cursor-default">
+          <span class="material-symbols-outlined text-4xl">verified</span>
+          <span class="text-headline-md font-headline-md font-bold uppercase tracking-widest">CBSE</span>
+        </div>
+        <div class="flex items-center gap-4 text-primary grayscale hover:grayscale-0 transition-all cursor-default">
+          <span class="material-symbols-outlined text-4xl">school</span>
+          <span class="text-headline-md font-headline-md font-bold uppercase tracking-widest">British Council</span>
+        </div>
+        <div class="flex items-center gap-4 text-primary grayscale hover:grayscale-0 transition-all cursor-default">
+          <span class="material-symbols-outlined text-4xl">workspace_premium</span>
+          <span class="text-headline-md font-headline-md font-bold uppercase tracking-widest">ISO 9001</span>
+        </div>
+        <div class="flex items-center gap-4 text-primary grayscale hover:grayscale-0 transition-all cursor-default">
+          <span class="material-symbols-outlined text-4xl">language</span>
+          <span class="text-headline-md font-headline-md font-bold uppercase tracking-widest">IB Candidate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Call to Action -->
+  <section class="py-section-gap bg-primary text-on-primary">
+    <div class="max-w-container-max mx-auto px-margin-desktop text-center">
+      <h2 class="text-headline-lg font-headline-lg mb-6">Experience the Legacy in Person</h2>
+      <p class="text-body-lg font-body-lg text-on-primary-container max-w-2xl mx-auto mb-10">
+        We invite you to visit our campus and witness the vibrant academic culture that defines Godwin Public School.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <button
+          class="bg-secondary text-on-secondary px-8 py-3 rounded-lg text-label-md font-label-md hover:bg-secondary-container transition-all shadow-md">Book
+          a School Tour</button>
+        <button
+          class="border border-on-primary text-on-primary px-8 py-3 rounded-lg text-label-md font-label-md hover:bg-white/10 transition-all">Download
+          Brochure</button>
+      </div>
+    </div>
+  </section>
+  <!-- Modular Footer -->
+  <div id="footer-placeholder"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    // Simple fade-in interaction for cards on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+            entry.target.classList.remove('opacity-0', 'translate-y-8');
+          }
+        });
+      }, observerOptions);
+
+      // Apply to some sections for subtle entry
+      document.querySelectorAll('section > div > div.grid > div').forEach(el => {
+        el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+
+</html>

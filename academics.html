@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Academics | Godwin Public School</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+                    "colors": {
+            "surface": "#F8F9FA",
+            "on-surface": "#2B303A",
+            "tertiary": "#222421",
+            "on-background": "#2B303A",
+            "error-container": "#ffdad6",
+            "secondary": "#E0701B",
+            "on-error": "#ffffff",
+            "surface-variant": "#e4e8e1",
+            "surface-container-high": "#eae8e7",
+            "surface-container-low": "#f6f8f4",
+            "surface-dim": "#dcd9d9",
+            "on-primary": "#ffffff",
+            "inverse-primary": "#8cd4ad",
+            "on-secondary-fixed": "#271900",
+            "inverse-surface": "#303030",
+            "inverse-on-surface": "#f3f0f0",
+            "secondary-fixed": "#fef08a",
+            "on-surface-variant": "#4A5160",
+            "surface-container-highest": "#e4e2e1",
+            "surface-tint": "#0D4234",
+            "on-primary-container": "#8cd4ad",
+            "outline-variant": "#c4c6d0",
+            "secondary-container": "#F98D37",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed-variant": "#072C22",
+            "primary": "#0D4234",
+            "primary-container": "#072C22",
+            "error": "#ba1a1a",
+            "surface-bright": "#F8F9FA",
+            "secondary-fixed-dim": "#facc15",
+            "surface-container": "#f0f4ee",
+            "outline": "#747780",
+            "tertiary-fixed": "#e3e3de",
+            "tertiary-container": "#373936",
+            "background": "#F8F9FA",
+            "on-error-container": "#93000a",
+            "primary-fixed-dim": "#8cd4ad",
+            "on-primary-fixed": "#012614",
+            "primary-fixed": "#bcf0d3",
+            "on-secondary-container": "#C65D0F",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed": "#1a1c19",
+            "on-secondary-fixed-variant": "#E0701B",
+            "tertiary-fixed-dim": "#c6c7c2",
+            "on-tertiary-fixed-variant": "#454744",
+            "surface-container-lowest": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "section-gap": "80px",
+            "base": "8px",
+            "margin-desktop": "48px",
+            "gutter": "24px",
+            "margin-mobile": "16px",
+            "container-max": "1200px"
+          },
+          "fontFamily": {
+            "sans": ["Libre Franklin", "sans-serif"],
+            "body-md": ["Libre Franklin", "sans-serif"],
+            "headline-lg-mobile": ["Libre Franklin", "sans-serif"],
+            "caption": ["Libre Franklin", "sans-serif"],
+            "label-md": ["Libre Franklin", "sans-serif"],
+            "headline-md": ["Libre Franklin", "sans-serif"],
+            "headline-lg": ["Libre Franklin", "sans-serif"],
+            "body-lg": ["Libre Franklin", "sans-serif"],
+            "headline-display": ["Libre Franklin", "sans-serif"]
+          },
+          "fontSize": {
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-display": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    .accordion-item.active .accordion-content {
+      max-height: 500px;
+    }
+
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body
+  class="bg-background text-on-background font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+  <!-- Modular Navigation Header -->
+  <div id="navbar-placeholder"></div>
+  <main>
+    <!-- Hero Section -->
+    <section class="relative h-[614px] min-h-[500px] flex items-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="w-full h-full bg-cover bg-center"
+          data-alt="A brightly lit modern classroom scene at a prestigious private school. Diverse students in smart navy and gold uniforms are engaged in a collaborative learning activity around high-tech tablet devices. The room features large windows, soft cream walls, and ergonomic furniture, reflecting a clean, minimalist, and elite academic environment. Warm sunlight streams in, highlighting the focus and intellectual energy of the scholarly setting."
+          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGiYNV27s-CFLev8GetjLeSUCzef8en1TzehhBhnhcJ_K1l0s8uebbvMX3GVfs0teESJMjM8Bfej5PwnJmcgjFPRwNW6RF8uflWtMRDDco63yhWDXWcZZDXGwZNIxTXxUniFW4LP2I2NjNBqLF9B2XWdh0tcYCcqJQdGVY2Y0BSF_GdlR7IWa2BELMG57SphdZAvOj9zJA0ViIzxNZzlUXM6gsXFxRR7DSUmJ35FaFsMMXRHzzDoo1R6R0mnKLvi-TJv8hG3qr8J0')">
+        </div>
+        <div class="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
+      </div>
+      <div class="relative z-10 w-full px-margin-desktop max-w-container-max mx-auto">
+        <div class="max-w-2xl">
+          <h1 class="text-headline-display font-headline-display text-white mb-4">Academic Excellence</h1>
+          <p class="text-body-lg font-body-lg text-surface-container-low mb-8">Nurturing curiosity, fostering
+            innovation, and building foundations for a lifetime of scholarly achievement in the heart of Bengaluru.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Curriculum Overview -->
+    <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+        <div class="lg:col-span-1">
+          <h2 class="text-headline-lg font-headline-lg text-primary mb-4">Our Curriculum</h2>
+          <p class="text-body-md font-body-md text-on-surface-variant mb-6">We strive to meet the scholastic demands of the NCERT syllabus through creative planning. Approximately 80% of teaching time is dedicated towards academic subjects, supplemented with modern Robotics, A.I., and Coding programs.</p>
+          <div class="p-6 bg-surface-container rounded-lg border border-outline-variant">
+            <span class="material-symbols-outlined text-secondary text-4xl mb-2">school</span>
+            <h4 class="text-label-md font-label-md text-secondary uppercase mb-2">Syllabus &amp; Affiliation</h4>
+            <p class="text-body-md font-body-md text-on-surface">Affiliated with NCERT Syllabus &amp; KSEAB State Board, producing 100% SSLC pass results consistently.</p>
+          </div>
+        </div>
+        <div class="lg:col-span-2 space-y-4">
+          <!-- Accordion Item 1 -->
+          <div class="accordion-item bg-white border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 active">
+            <button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colors" onclick="this.parentElement.classList.toggle('active')">
+              <span class="text-headline-md font-headline-md text-primary">Primary &amp; Elementary School (Standard 1-5)</span>
+              <span class="material-symbols-outlined accordion-icon transition-transform duration-300 text-secondary">expand_more</span>
+            </button>
+            <div class="accordion-content">
+              <div class="p-6 pt-0 border-t border-outline-variant/30">
+                <p class="text-body-md font-body-md text-on-surface-variant mb-4">Compulsory computer education starts right from 1st standard with individual systems in our 3rd-floor computer lab. Concept-based teaching develops the right frame of mind and social consciousness.</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <li class="flex items-center gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> English, Hindi &amp; Kannada Languages</li>
+                  <li class="flex items-center gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Mathematics &amp; Science Labs</li>
+                  <li class="flex items-center gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Basic Computer Course &amp; Multimedia</li>
+                  <li class="flex items-center gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Fine Arts, Music &amp; Theater</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Accordion Item 2 -->
+          <div class="accordion-item bg-white border border-outline-variant rounded-lg overflow-hidden transition-all duration-300">
+            <button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colors" onclick="this.parentElement.classList.toggle('active')">
+              <span class="text-headline-md font-headline-md text-primary">Middle &amp; Secondary School (Standard 6-10)</span>
+              <span class="material-symbols-outlined accordion-icon transition-transform duration-300 text-secondary">expand_more</span>
+            </button>
+            <div class="accordion-content">
+              <div class="p-6 pt-0 border-t border-outline-variant/30">
+                <p class="text-body-md font-body-md text-on-surface-variant mb-4">Advanced NCERT curriculum preparing students for matriculation (Class X) SSLC exams with 100% distinction track record.</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <li class="flex items-center gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Robotics, A.I. &amp; Coding Subjects</li>
+                  <li class="flex items-center gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Physics, Chemistry &amp; Biology Labs</li>
+                  <li class="flex items-center gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Mathematics Geometrical Lab</li>
+                  <li class="flex items-center gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Digital Smart Classrooms</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Pedagogy / Methodology -->
+    <section class="bg-primary text-on-primary py-section-gap">
+      <div class="px-margin-desktop max-w-container-max mx-auto text-center mb-16">
+        <h2 class="text-headline-lg font-headline-lg mb-4 text-white">Our Pedagogical Approach</h2>
+        <p class="text-body-lg font-body-lg text-primary-fixed max-w-3xl mx-auto">Blending rigorous academic education with spiritual, cultural, and physical development.</p>
+      </div>
+      <div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter">
+        <!-- Individual Care -->
+        <div class="flex gap-6 p-8 bg-primary-container rounded-lg border border-on-primary-container/20 group hover:border-secondary transition-all">
+          <div class="bg-surface-container-lowest text-primary p-4 rounded-full h-fit flex items-center justify-center">
+            <span class="material-symbols-outlined text-3xl">groups</span>
+          </div>
+          <div>
+            <h3 class="text-headline-md font-headline-md mb-3 text-white">20 : 1 Student-Teacher Ratio</h3>
+            <p class="text-body-md font-body-md text-primary-fixed-dim">Every class has limited seats ensuring individual attention. Students with severe learning needs receive special attention to gradually integrate into mainstream learning.</p>
+          </div>
+        </div>
+        <!-- Modern STEM & Coding -->
+        <div class="flex gap-6 p-8 bg-primary-container rounded-lg border border-on-primary-container/20 group hover:border-secondary transition-all">
+          <div class="bg-surface-container-lowest text-primary p-4 rounded-full h-fit flex items-center justify-center">
+            <span class="material-symbols-outlined text-3xl">terminal</span>
+          </div>
+          <div>
+            <h3 class="text-headline-md font-headline-md mb-3 text-white">Robotics, A.I. &amp; Coding</h3>
+            <p class="text-body-md font-body-md text-primary-fixed-dim">Hands-on practical training in computer science, robotics, and artificial intelligence to prepare students for the fast-growing technological world.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Faculty Section -->
+    <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+        <div class="max-w-xl">
+          <h2 class="text-headline-lg font-headline-lg text-primary mb-4">Dedicated Teaching Faculty</h2>
+          <p class="text-body-md font-body-md text-on-surface-variant">Our experienced faculty employs diverse teaching styles and practical activities to nurture every student's potential.</p>
+        </div>
+        <div class="flex gap-4">
+          <div class="text-center px-6 py-4 border-l border-outline-variant">
+            <div class="text-headline-md font-headline-md text-secondary">20 : 1</div>
+            <div class="text-caption font-caption text-on-surface-variant uppercase tracking-wider">Student-Teacher Ratio</div>
+          </div>
+          <div class="text-center px-6 py-4 border-l border-outline-variant">
+            <div class="text-headline-md font-headline-md text-secondary">29+ Years</div>
+            <div class="text-caption font-caption text-on-surface-variant uppercase tracking-wider">Trust Legacy</div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+        <!-- Faculty Card 1 -->
+        <div class="group">
+          <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-4 bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="A professional portrait of a senior academician, an Indian woman in her late 40s wearing a sophisticated navy blazer and a light silk scarf. She has a warm, confident expression and is standing in a library with blurred wooden bookshelves in the background. The lighting is soft and studio-quality, emphasizing a premium and authoritative institutional feel."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBawJTvA-KsaCUlrtcvvhq6eVNidwD7BMhf1KYbJsPnw8eGM-jp8YEY0-qW5USBBttLFzZdjErDm1qqAB6M7bug9GhYHsaV6NbNjXNu2GZ4lf-ty3rxAHAvnufexrmCIvk-dfGz00DXLKg56VeUBmUekCKX2cEj7e0jT1Ka1RdXaZPAICUOzkgeJGmmGMhFc0Z9a51ydoV06MEi-9WpgHTMjAffADh0d-1FIYbZYk3RQhmaQryvvVUIQTaJuLHKhy9iOpuvzVE4LDs" />
+          </div>
+          <h4 class="text-label-md font-label-md text-primary mb-1">Dr. Ananya Sharma</h4>
+          <p class="text-caption font-caption text-on-surface-variant">Head of Sciences, Ph.D. Oxford</p>
+        </div>
+        <!-- Faculty Card 2 -->
+        <div class="group">
+          <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-4 bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="A professional headshot of a middle-aged male educator, distinguished and approachable, wearing a charcoal grey suit. He is standing against a clean white wall with a subtle Godwin Public School crest embossed behind him. High-key, bright lighting creates a modern and professional aesthetic. His look conveys expertise and dedication to academic excellence."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkiadShfCWjjkZ2bVyS_GIDev2db9-MpRL2UOjcAeSrvMGLdVlcEVRQvdvcvv6GGDN_3ntHWcr8ODrW6l9ZEiLKRupEkLdcGz-n74TBrnnJIE79fHaWhPPsBHA-eijqMGoitvA3M2cRdxKK8ab_9SZtF9MvCyaKpNL1JBmjvAbJHCe2a2U1FRp-Syea00h6cQ4o--zIeyoGk-GgAr4seWSCG4JNTJ5Ve-Q6Fyeez2aOd7yCgIJAgtK8cDbDjV0ixFYZNCn239765U" />
+          </div>
+          <h4 class="text-label-md font-label-md text-primary mb-1">Prof. Robert Miller</h4>
+          <p class="text-caption font-caption text-on-surface-variant">Dean of Humanities, M.A. Stanford</p>
+        </div>
+        <!-- Faculty Card 3 -->
+        <div class="group">
+          <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-4 bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="A portrait of a young, enthusiastic female math teacher in her early 30s, wearing a professional cream-colored blouse. She is holding a tablet and smiling, with a modern, high-tech classroom blurred in the background. The image has a light-mode aesthetic with soft shadows and a focus on accessibility and modern pedagogy."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAAcyKsCbkzG48pGD_pb_n98mbB16hAlsL2zz7ytXFSVboJ7_O-gerS5u9Ii2GbYDgIUNKb8YfJU4_VZSJc2H-jhaK5xQh31C3KTEMuETvakJ9vGYuqFuy4Yr3Tk1_G7il_rxMOy2xkZT_ogLLE8VRAZW7Dfq91-ThNiA7-ExBfH7goSv3yA8qhzJmIXQlvl7fo-tsoVERP5nheZclQJGiWFWsAsY3i0dlbqcpFcNCIyNO12FdACOhXrhv2pbxceId4zt0ms-QPQQ" />
+          </div>
+          <h4 class="text-label-md font-label-md text-primary mb-1">Ms. Kavita Reddy</h4>
+          <p class="text-caption font-caption text-on-surface-variant">Math Department Lead, M.Sc. IISc</p>
+        </div>
+        <!-- Faculty Card 4 -->
+        <div class="group">
+          <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-4 bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="A professional portrait of a senior male arts instructor, wearing a classic tweed jacket and looking thoughtful. The setting is a bright, airy art studio with canvases and light streaming through large industrial windows. The style is sophisticated, minimalist, and deeply rooted in institutional heritage and creativity."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuF1yvDaaEvVGWp1eRfgJXeuSKwZqaeN0b-ycBCrEAjpIx-rYnPSI1R7OxPg4PwkimI2NZnPoOyDlNTmFeLoXX0ibSHNjOxOR2MKgZrn7m1CUaEwXByaHViEWaeAFET3dRmJr1z2rb9z8JReU7eqUtn1NNR_hglafGXlh5YT5I_0A9ZITgobxPNYbA85wjFH-eEjb_svKhPY4L5zSvVTFfTqAY1JAz6HjLmj2FBb1q-dz8JPXZX072dY-R0iSrAE-8bAx-FN-R_4c" />
+          </div>
+          <h4 class="text-label-md font-label-md text-primary mb-1">Mr. Julian Varkey</h4>
+          <p class="text-caption font-caption text-on-surface-variant">Director of Fine Arts, MFA Chicago</p>
+        </div>
+      </div>
+    </section>
+    <!-- Academic Calendar Preview -->
+    <section
+      class="py-section-gap px-margin-desktop max-w-container-max mx-auto bg-surface-container rounded-xl overflow-hidden mb-section-gap">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 p-8 md:p-12">
+        <div>
+          <h2 class="text-headline-lg font-headline-lg text-primary mb-4">Academic Calendar 2024-25</h2>
+          <p class="text-body-md font-body-md text-on-surface-variant mb-8">Stay informed about upcoming terms,
+            examinations, and institutional holidays. Planning ahead ensures a seamless academic journey for our
+            students.</p>
+          <a class="inline-flex items-center gap-3 bg-secondary text-on-secondary px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-on-secondary-container transition-all shadow-lg shadow-secondary/10"
+            href="#">
+            <span class="material-symbols-outlined">download</span>
+            Download Full Calendar (PDF)
+          </a>
+        </div>
+        <div class="space-y-4">
+          <div
+            class="flex items-center gap-6 p-4 bg-white rounded-lg border border-outline-variant hover:border-secondary transition-all">
+            <div class="text-center min-w-[60px]">
+              <div class="text-headline-md font-headline-md text-secondary">15</div>
+              <div class="text-caption font-caption text-on-surface-variant uppercase">Jun</div>
+            </div>
+            <div>
+              <h4 class="text-label-md font-label-md text-primary">Academic Year Commencement</h4>
+              <p class="text-caption font-caption text-on-surface-variant">Orientation for new parents and students</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-6 p-4 bg-white rounded-lg border border-outline-variant hover:border-secondary transition-all">
+            <div class="text-center min-w-[60px]">
+              <div class="text-headline-md font-headline-md text-secondary">02</div>
+              <div class="text-caption font-caption text-on-surface-variant uppercase">Oct</div>
+            </div>
+            <div>
+              <h4 class="text-label-md font-label-md text-primary">Mid-Term Assessment Series</h4>
+              <p class="text-caption font-caption text-on-surface-variant">Formative evaluations for Grades 6-12</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-6 p-4 bg-white rounded-lg border border-outline-variant hover:border-secondary transition-all">
+            <div class="text-center min-w-[60px]">
+              <div class="text-headline-md font-headline-md text-secondary">20</div>
+              <div class="text-caption font-caption text-on-surface-variant uppercase">Dec</div>
+            </div>
+            <div>
+              <h4 class="text-label-md font-label-md text-primary">Winter Vacation Begins</h4>
+              <p class="text-caption font-caption text-on-surface-variant">School reopens on Jan 5th</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Modular Footer -->
+  <div id="footer-placeholder"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

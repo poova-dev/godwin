@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Admissions | Godwin Public School</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&amp;family=Source+Serif+4:wght@600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .timeline-line::before {
+      content: '';
+      position: absolute;
+      left: 1.25rem;
+      top: 2rem;
+      bottom: 0;
+      width: 2px;
+      background: #dcd9d9;
+    }
+
+    .timeline-step:last-child .timeline-line::before {
+      display: none;
+    }
+  </style>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+                    "colors": {
+            "surface": "#F8F9FA",
+            "on-surface": "#2B303A",
+            "tertiary": "#222421",
+            "on-background": "#2B303A",
+            "error-container": "#ffdad6",
+            "secondary": "#E0701B",
+            "on-error": "#ffffff",
+            "surface-variant": "#e4e8e1",
+            "surface-container-high": "#eae8e7",
+            "surface-container-low": "#f6f8f4",
+            "surface-dim": "#dcd9d9",
+            "on-primary": "#ffffff",
+            "inverse-primary": "#8cd4ad",
+            "on-secondary-fixed": "#271900",
+            "inverse-surface": "#303030",
+            "inverse-on-surface": "#f3f0f0",
+            "secondary-fixed": "#fef08a",
+            "on-surface-variant": "#4A5160",
+            "surface-container-highest": "#e4e2e1",
+            "surface-tint": "#0D4234",
+            "on-primary-container": "#8cd4ad",
+            "outline-variant": "#c4c6d0",
+            "secondary-container": "#F98D37",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed-variant": "#072C22",
+            "primary": "#0D4234",
+            "primary-container": "#072C22",
+            "error": "#ba1a1a",
+            "surface-bright": "#F8F9FA",
+            "secondary-fixed-dim": "#facc15",
+            "surface-container": "#f0f4ee",
+            "outline": "#747780",
+            "tertiary-fixed": "#e3e3de",
+            "tertiary-container": "#373936",
+            "background": "#F8F9FA",
+            "on-error-container": "#93000a",
+            "primary-fixed-dim": "#8cd4ad",
+            "on-primary-fixed": "#012614",
+            "primary-fixed": "#bcf0d3",
+            "on-secondary-container": "#C65D0F",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed": "#1a1c19",
+            "on-secondary-fixed-variant": "#E0701B",
+            "tertiary-fixed-dim": "#c6c7c2",
+            "on-tertiary-fixed-variant": "#454744",
+            "surface-container-lowest": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "section-gap": "80px",
+            "base": "8px",
+            "margin-desktop": "48px",
+            "gutter": "24px",
+            "margin-mobile": "16px",
+            "container-max": "1200px"
+          },
+          "fontFamily": {
+            "sans": ["Libre Franklin", "sans-serif"],
+            "body-md": ["Libre Franklin", "sans-serif"],
+            "headline-lg-mobile": ["Libre Franklin", "sans-serif"],
+            "caption": ["Libre Franklin", "sans-serif"],
+            "label-md": ["Libre Franklin", "sans-serif"],
+            "headline-md": ["Libre Franklin", "sans-serif"],
+            "headline-lg": ["Libre Franklin", "sans-serif"],
+            "body-lg": ["Libre Franklin", "sans-serif"],
+            "headline-display": ["Libre Franklin", "sans-serif"]
+          },
+          "fontSize": {
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-display": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-surface text-on-surface font-body-md">
+  <!-- Modular Navigation Header -->
+  <div id="navbar-placeholder"></div>
+  <!-- Hero Section -->
+  <header class="relative w-full h-[600px] flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="w-full h-full bg-cover bg-center"
+        data-alt="A heartwarming, high-resolution photograph of a diverse parent and their young child walking hand-in-hand through a sun-drenched, prestigious school corridor. The setting features classic brick architecture and lush greenery visible through large windows, creating an atmosphere of safety, academic heritage, and bright futures. The lighting is soft and golden, emphasizing a premium light-mode aesthetic with rich navy and gold accents in the environment."
+        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4iFCaDxNl8uRthFPDOQxhdDGtGL3I51BPcu0PcUnc_mpZRsG5UnykqJ26EJYsablqrVNuKe5gzMjl_8YMxCcIW4SO90cjdiP3jKTED8qRPrau1mXIQVDUmf2NbiilIAnsYuVroimXmUoUCbsUQxavSN-oyKK7RuU1BxbgaSzDdNM_zvHtkFbraAa8fxhYfLmmNDxmrLTBsYYWmvwPKufbyeY2cHwVG2Htm-TIG8KCoROX3rkz346gideLppnpbIEDGp_t775fzGk')">
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
+    </div>
+    <div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+      <div class="max-w-2xl">
+        <h1 class="text-headline-display font-headline-display text-on-primary mb-6">Begin Your Journey</h1>
+        <p class="text-body-lg font-body-lg text-primary-fixed mb-8">Nurturing excellence through tradition and
+          innovation. Join a community where every child's potential is discovered and celebrated.</p>
+        <div class="flex gap-4">
+          <a class="bg-secondary text-on-secondary px-8 py-4 rounded-lg font-label-md shadow-lg hover:opacity-90 transition-all border-b-2 border-secondary-fixed-dim"
+            href="#enquiry-form">Start Enrollment</a>
+          <a class="border border-on-primary text-on-primary px-8 py-4 rounded-lg font-label-md hover:bg-white/10 transition-all"
+            href="#process">View Process</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Admission Process -->
+  <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto" id="process">
+    <div class="text-center mb-16">
+      <h2 class="text-headline-lg font-headline-lg text-primary mb-4">Admissions Process</h2>
+      <p class="text-body-md font-body-md text-on-surface-variant max-w-xl mx-auto">A seamless 5-step journey to
+        becoming part of the Godwin family.</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+      <div class="space-y-0">
+        <div class="timeline-step relative pb-12 timeline-line">
+          <div class="flex gap-6">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold z-10">
+              1</div>
+            <div>
+              <h3 class="text-headline-md font-headline-md text-primary mb-2">Initial Enquiry</h3>
+              <p class="text-body-md font-body-md text-on-surface-variant">Fill out our online form or visit the campus
+                to collect the prospectus and admission kit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-step relative pb-12 timeline-line">
+          <div class="flex gap-6">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold z-10">
+              2</div>
+            <div>
+              <h3 class="text-headline-md font-headline-md text-primary mb-2">Campus Interaction</h3>
+              <p class="text-body-md font-body-md text-on-surface-variant">Schedule a personalized tour of our
+                facilities and meet with the academic leadership team.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-step relative pb-12 timeline-line">
+          <div class="flex gap-6">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold z-10">
+              3</div>
+            <div>
+              <h3 class="text-headline-md font-headline-md text-primary mb-2">Assessment &amp; Interview</h3>
+              <p class="text-body-md font-body-md text-on-surface-variant">Students undergo a developmental assessment
+                followed by a friendly interaction with the Principal.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-step relative pb-12 timeline-line">
+          <div class="flex gap-6">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold z-10">
+              4</div>
+            <div>
+              <h3 class="text-headline-md font-headline-md text-primary mb-2">Documentation</h3>
+              <p class="text-body-md font-body-md text-on-surface-variant">Submit the required academic records, birth
+                certificate, and residency proof for verification.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-step relative">
+          <div class="flex gap-6">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold z-10">
+              5</div>
+            <div>
+              <h3 class="text-headline-md font-headline-md text-primary mb-2">Confirmation</h3>
+              <p class="text-body-md font-body-md text-on-surface-variant">On approval, pay the admission fee to secure
+                your child's seat for the upcoming session.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden lg:block">
+        <div class="rounded-xl overflow-hidden shadow-2xl border border-outline-variant">
+          <div class="w-full h-[500px] bg-cover bg-center"
+            data-alt="A high-quality architectural photograph showing a modern, state-of-the-art school reception area. The space is bright and inviting with warm wood accents, comfortable seating, and an institutional seal on the wall. The atmosphere is professional and scholarly, reflecting a premium light-mode design with clean lines and balanced white space."
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAtI8oGxVVy0S2eOVVud76yATlOimqDtOqpfvRifWqOSKbe63KeN_F2wf7uF5f5NTBPQGPgjcB6MKLWRkLve-gqyrWQEy7ly-ARi9XwaEVY201UeEy1qWgsbryhHAZ_SDUpvNr7oaDhsJq2RkyybQ9yvFwAphtyILA44G4qoPsITU18BJcFXuFMtEL7qOCJfPyVYPHhvllaR3IdELipt8BVeIXNgBI7YsbxtXbd904V73tkKrSxmihnRy6ugpUnB0p4Qgmloc_6-rE')">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Eligibility & Age Criteria -->
+  <section class="py-section-gap bg-surface-container-low">
+    <div class="px-margin-desktop max-w-container-max mx-auto">
+      <h2 class="text-headline-lg font-headline-lg text-primary mb-12 text-center">Eligibility &amp; Age Criteria</h2>
+      <div class="overflow-x-auto bg-white rounded-xl border border-outline-variant shadow-sm">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-primary text-on-primary">
+              <th class="px-8 py-5 font-headline-md border-r border-white/10">Grade</th>
+              <th class="px-8 py-5 font-headline-md border-r border-white/10">Age Limit (as of June 1st)</th>
+              <th class="px-8 py-5 font-headline-md">Prior Schooling Requirement</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-outline-variant">
+            <tr>
+              <td class="px-8 py-6 font-bold text-primary">Pre-K / Nursery</td>
+              <td class="px-8 py-6">3+ Years</td>
+              <td class="px-8 py-6 text-on-surface-variant">None</td>
+            </tr>
+            <tr>
+              <td class="px-8 py-6 font-bold text-primary">Lower KG</td>
+              <td class="px-8 py-6">4+ Years</td>
+              <td class="px-8 py-6 text-on-surface-variant">Pre-K recommended</td>
+            </tr>
+            <tr>
+              <td class="px-8 py-6 font-bold text-primary">Upper KG</td>
+              <td class="px-8 py-6">5+ Years</td>
+              <td class="px-8 py-6 text-on-surface-variant">Nursery/LKG completion</td>
+            </tr>
+            <tr>
+              <td class="px-8 py-6 font-bold text-primary">Grade 1 - 5</td>
+              <td class="px-8 py-6">6+ Years (Grade 1)</td>
+              <td class="px-8 py-6 text-on-surface-variant">Transfer certificate from previous school</td>
+            </tr>
+            <tr>
+              <td class="px-8 py-6 font-bold text-primary">Grade 6 - 10</td>
+              <td class="px-8 py-6">11+ Years (Grade 6)</td>
+              <td class="px-8 py-6 text-on-surface-variant">Last 2 years' academic transcripts</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-6 text-caption text-on-surface-variant italic text-center">*Age limits are subject to change based on
+        government regulations.</p>
+    </div>
+  </section>
+  <!-- Fee Structure -->
+  <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+    <div
+      class="flex flex-col md:flex-row items-center justify-between gap-gutter bg-primary rounded-xl p-12 text-on-primary">
+      <div class="md:max-w-xl">
+        <h2 class="text-headline-lg font-headline-lg mb-4">Fee Structure Summary</h2>
+        <p class="text-body-md mb-6 opacity-90">Godwin Public School maintains a transparent and inclusive fee policy.
+          Our fees cover all academic materials, extracurricular basic training, and laboratory access.</p>
+        <div class="flex flex-wrap gap-4 mb-8">
+          <div class="bg-white/10 px-4 py-2 rounded border border-white/20">
+            <span class="block text-caption uppercase tracking-wider opacity-70">Application Fee</span>
+            <span class="text-headline-md font-bold">₹ 1,500</span>
+          </div>
+          <div class="bg-white/10 px-4 py-2 rounded border border-white/20">
+            <span class="block text-caption uppercase tracking-wider opacity-70">Registration</span>
+            <span class="text-headline-md font-bold">₹ 15,000</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex-shrink-0">
+        <button
+          class="flex items-center gap-3 bg-secondary text-on-secondary px-8 py-4 rounded-lg font-label-md hover:scale-105 transition-transform">
+          <span class="material-symbols-outlined">download</span>
+          Download Fee Schedule (PDF)
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- Enquiry Form -->
+  <section class="py-section-gap bg-surface" id="enquiry-form">
+    <div class="px-margin-desktop max-w-container-max mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div>
+          <h2 class="text-headline-lg font-headline-lg text-primary mb-6">Schedule a Visit</h2>
+          <p class="text-body-md font-body-md text-on-surface-variant mb-8">The best way to understand the Godwin
+            experience is to witness it firsthand. Share your details, and our admissions officer will reach out to you
+            within 24 hours.</p>
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div
+                class="w-12 h-12 rounded-full bg-primary-container text-primary flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-outlined">event_available</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary">Visit Availability</h4>
+                <p class="text-caption text-on-surface-variant">Monday to Friday: 9:00 AM - 3:00 PM<br />Saturday: 9:00
+                  AM - 1:00 PM</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div
+                class="w-12 h-12 rounded-full bg-primary-container text-primary flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-outlined">contact_support</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary">Need Help?</h4>
+                <p class="text-caption text-on-surface-variant">Call our helpdesk: +91 80 2362 4855 / +91 94480 52366<br />Email:
+                  info@godwinpublicschoolblr.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-8 md:p-12 rounded-xl border border-outline-variant shadow-lg">
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-label-md font-label-md mb-2 text-primary">Parent's Name</label>
+                <input class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary"
+                  placeholder="Full Name" type="text" required />
+              </div>
+              <div>
+                <label class="block text-label-md font-label-md mb-2 text-primary">Mobile Number</label>
+                <input class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary"
+                  placeholder="+91 10-digit number" type="tel" required />
+              </div>
+            </div>
+            <div>
+              <label class="block text-label-md font-label-md mb-2 text-primary">Email Address</label>
+              <input class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary"
+                placeholder="example@email.com" type="email" />
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-label-md font-label-md mb-2 text-primary">Grade Interested</label>
+                <select class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary">
+                  <option>Select Grade</option>
+                  <option>Nursery / Kindergarten</option>
+                  <option>Primary School (Class 1-5)</option>
+                  <option>Middle School (Class 6-8)</option>
+                  <option>Secondary School (Class 9-10)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-label-md font-label-md mb-2 text-primary">Academic Year</label>
+                <select class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary">
+                  <option>2026 - 2027</option>
+                  <option>2027 - 2028</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label class="block text-label-md font-label-md mb-2 text-primary">Additional Message</label>
+              <textarea class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary"
+                placeholder="Any specific questions?" rows="4"></textarea>
+            </div>
+            <button
+              class="w-full bg-primary text-on-primary py-4 rounded-lg font-label-md hover:bg-primary-container transition-all"
+              type="submit">Submit Enquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FAQ Section -->
+  <section class="py-section-gap bg-surface-container-low">
+    <div class="px-margin-desktop max-w-container-max mx-auto">
+      <h2 class="text-headline-lg font-headline-lg text-primary mb-12 text-center">Frequently Asked Questions</h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        <details class="group bg-white border border-outline-variant rounded-lg overflow-hidden" open="">
+          <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+            <span class="font-headline-md text-primary">What transport facilities are available?</span>
+            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-on-surface-variant">
+            <p>We provide a GPS-enabled fleet of buses covering major routes in Bengaluru. Each bus is accompanied by a
+              trained female attendant and follows strict safety protocols. Parents can track the bus location in
+              real-time through our mobile app.</p>
+          </div>
+        </details>
+        <details class="group bg-white border border-outline-variant rounded-lg overflow-hidden">
+          <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+            <span class="font-headline-md text-primary">Are school uniforms provided on campus?</span>
+            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-on-surface-variant">
+            <p>Yes, uniforms can be measured and ordered directly from the school's on-campus store during the admission
+              window. We provide regular daily uniforms, house-colored sports kits, and winter sweaters.</p>
+          </div>
+        </details>
+        <details class="group bg-white border border-outline-variant rounded-lg overflow-hidden">
+          <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+            <span class="font-headline-md text-primary">What meal options are available for students?</span>
+            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-on-surface-variant">
+            <p>We offer an optional nutritious vegetarian meal plan prepared in our hygienic central kitchen. The menu
+              is designed by a nutritionist to provide a balanced diet, including breakfast and a full lunch. Special
+              dietary needs can be accommodated upon request.</p>
+          </div>
+        </details>
+        <details class="group bg-white border border-outline-variant rounded-lg overflow-hidden">
+          <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+            <span class="font-headline-md text-primary">What is the student-teacher ratio?</span>
+            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-on-surface-variant">
+            <p>We maintain a strict student-teacher ratio of <strong>20:1</strong> — limited seats per class — ensuring every child receives special personal attention. Children with severe learning needs are given additional focused support to gradually integrate into mainstream learning.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+  <!-- Modular Footer -->
+  <div id="footer-placeholder"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/app.js"></script>
+</body></html>

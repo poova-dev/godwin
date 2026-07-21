@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloudinary Media | Godwin Admin</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header">
+        <div class="logo-badge" style="width: 36px; height: 36px; font-size: 1.1rem;">G</div>
+        <div style="font-weight: 700; color: #fff;">Godwin Admin</div>
+      </div>
+
+      <a href="dashboard.html" class="admin-nav-item">📊 Overview</a>
+      <a href="homepage.html" class="admin-nav-item">🏠 Homepage Editor</a>
+      <a href="settings.html" class="admin-nav-item">⚙️ School Settings</a>
+      <a href="media.html" class="admin-nav-item active">☁️ Cloudinary Media</a>
+      <a href="../index.html" target="_blank" class="admin-nav-item" style="margin-top: auto;">🌐 View Live Site ↗</a>
+      <button onclick="logoutAdmin()" class="admin-nav-item" style="background: none; border: none; text-align: left; color: #ef4444;">🚪 Sign Out</button>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-header-bar">
+        <div>
+          <h1 style="font-size: 1.6rem; color: var(--primary-navy);">Cloudinary Media Manager</h1>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Generate webp auto-optimized image URLs</p>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <form onsubmit="event.preventDefault(); const name = this.cName.value; const id = this.pId.value; if(name && id) { const url = `https://res.cloudinary.com/${name}/image/upload/f_auto,q_auto,w_800/${id}`; document.getElementById('genUrl').value = url; document.getElementById('outBox').style.display='block'; }">
+          <div class="form-group">
+            <label>Cloud Name</label>
+            <input type="text" name="cName" class="form-control" placeholder="e.g. godwinschool" required>
+          </div>
+
+          <div class="form-group">
+            <label>Public ID / Image Path</label>
+            <input type="text" name="pId" class="form-control" placeholder="e.g. hero/banner1" required>
+          </div>
+
+          <button type="submit" class="btn-primary">Generate Cloudinary URL</button>
+        </form>
+
+        <div id="outBox" style="display: none; margin-top: 1.5rem; background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 6px;">
+          <label style="font-weight: 700; color: #166534; display: block; margin-bottom: 0.35rem;">Generated URL:</label>
+          <input type="text" id="genUrl" readonly class="form-control" style="background: #ffffff;">
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/admin.js"></script>
+  <script>checkAdminAuth();</script>
+</body>
+</html>
