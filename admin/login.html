@@ -4,8 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin Portal Login | Godwin Public School</title>
-  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
-  <link rel="shortcut icon" href="../assets/images/favicon.svg">
   <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet" />
@@ -93,12 +91,13 @@
         const res = await fetch('/api/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
           body: JSON.stringify({ password })
         });
 
         if (res.ok) {
           const data = await res.json().catch(() => ({}));
-          if (data.success) {
+          if (data.success || data.ok) {
             sessionStorage.setItem('godwin_admin_authenticated', 'true');
             submitBtn.innerHTML = `<span class="material-symbols-outlined text-lg">check_circle</span> <span>Access Granted</span>`;
             setTimeout(() => {
@@ -114,10 +113,10 @@
           }
         }
       } catch (err) {
-        console.warn('API login call failed:', err);
+        console.warn('API /api/login endpoint not active locally, attempting static preview check...', err);
       }
 
-      // Local preview / static server fallback (when /api/login endpoint returns 404 or fails)
+      // Local preview fallback (when /api/login returns 404 on local static servers like Live Server)
       if (password === 'godwin2026' || password === 'admin123' || password === 'admin') {
         sessionStorage.setItem('godwin_admin_authenticated', 'true');
         submitBtn.innerHTML = `<span class="material-symbols-outlined text-lg">check_circle</span> <span>Access Granted</span>`;

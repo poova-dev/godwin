@@ -34,7 +34,7 @@ export async function onRequestPost(context) {
     const cookieHeader = `godwin_admin_session=${sessionToken}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=604800`;
 
     return new Response(
-      JSON.stringify({ success: true, message: 'Authentication successful' }),
+      JSON.stringify({ success: true, ok: true, message: 'Authentication successful' }),
       {
         status: 200,
         headers: {
