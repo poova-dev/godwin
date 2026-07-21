@@ -5,8 +5,9 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <link rel="shortcut icon" href="assets/images/favicon.svg">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
   <title>Admissions | Godwin Public School</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link
@@ -15,7 +16,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
     rel="stylesheet" />
-  
+
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     .material-symbols-outlined {
@@ -41,7 +42,7 @@
       darkMode: "class",
       theme: {
         extend: {
-                    "colors": {
+          "colors": {
             "surface": "#F8F9FA",
             "on-surface": "#2B303A",
             "tertiary": "#222421",
@@ -128,7 +129,7 @@
       },
     }
   </script>
-  
+
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -284,12 +285,12 @@
         government regulations.</p>
     </div>
   </section>
-  <!-- Fee Structure -->
-  <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+  <!-- Fee Structure & Application -->
+  <section id="application" class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
     <div
       class="flex flex-col md:flex-row items-center justify-between gap-gutter bg-primary rounded-xl p-12 text-on-primary">
       <div class="md:max-w-xl">
-        <h2 class="text-headline-lg font-headline-lg mb-4">Fee Structure Summary</h2>
+        <h2 class="text-headline-lg font-headline-lg mb-4">Online Application &amp; Fee Structure</h2>
         <p class="text-body-md mb-6 opacity-90">Godwin Public School maintains a transparent and inclusive fee policy.
           Our fees cover all academic materials, extracurricular basic training, and laboratory access.</p>
         <div class="flex flex-wrap gap-4 mb-8">
@@ -307,13 +308,13 @@
         <button
           class="flex items-center gap-3 bg-secondary text-on-secondary px-8 py-4 rounded-lg font-label-md hover:scale-105 transition-transform">
           <span class="material-symbols-outlined">download</span>
-          Download Fee Schedule (PDF)
+          Download Application Form (PDF)
         </button>
       </div>
     </div>
   </section>
   <!-- Enquiry Form -->
-  <section class="py-section-gap bg-surface" id="enquiry-form">
+  <section class="py-section-gap bg-surface" id="enquiry">
     <div class="px-margin-desktop max-w-container-max mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <div>
@@ -340,7 +341,8 @@
               </div>
               <div>
                 <h4 class="font-bold text-primary">Need Help?</h4>
-                <p class="text-caption text-on-surface-variant">Call our helpdesk: +91 80 2362 4855 / +91 94480 52366<br />Email:
+                <p class="text-caption text-on-surface-variant">Call our helpdesk: +91 80 2362 4855 / +91 94480
+                  52366<br />Email:
                   info@godwinpublicschoolblr.com</p>
               </div>
             </div>
@@ -440,7 +442,9 @@
             <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
           </summary>
           <div class="px-6 pb-6 text-on-surface-variant">
-            <p>We maintain a strict student-teacher ratio of <strong>20:1</strong> — limited seats per class — ensuring every child receives special personal attention. Children with severe learning needs are given additional focused support to gradually integrate into mainstream learning.</p>
+            <p>We maintain a strict student-teacher ratio of <strong>20:1</strong> — limited seats per class — ensuring
+              every child receives special personal attention. Children with severe learning needs are given additional
+              focused support to gradually integrate into mainstream learning.</p>
           </div>
         </details>
       </div>
@@ -448,7 +452,9 @@
   </section>
   <!-- Modular Footer -->
   <div id="footer-placeholder"></div>
-  
+
   <script src="assets/js/components.js"></script>
   <script src="assets/js/app.js"></script>
-</body></html>
+</body>
+
+</html>

@@ -5,8 +5,9 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <link rel="shortcut icon" href="assets/images/favicon.svg">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
   <title>Academics | Godwin Public School</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link
@@ -15,14 +16,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
     rel="stylesheet" />
-  
+
   <link rel="stylesheet" href="assets/css/style.css">
   <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
       theme: {
         extend: {
-                    "colors": {
+          "colors": {
             "surface": "#F8F9FA",
             "on-surface": "#2B303A",
             "tertiary": "#222421",
@@ -123,9 +124,8 @@
     .accordion-item.active .accordion-content {
       max-height: 500px;
     }
-
   </style>
-  
+
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -153,80 +153,122 @@
     </section>
     <!-- Curriculum Overview -->
     <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
-        <div class="lg:col-span-1">
-          <h2 class="text-headline-lg font-headline-lg text-primary mb-4">Our Curriculum</h2>
-          <p class="text-body-md font-body-md text-on-surface-variant mb-6">We strive to meet the scholastic demands of the NCERT syllabus through creative planning. Approximately 80% of teaching time is dedicated towards academic subjects, supplemented with modern Robotics, A.I., and Coding programs.</p>
-          <div class="p-6 bg-surface-container rounded-lg border border-outline-variant">
-            <span class="material-symbols-outlined text-secondary text-4xl mb-2">school</span>
-            <h4 class="text-label-md font-label-md text-secondary uppercase mb-2">Syllabus &amp; Affiliation</h4>
-            <p class="text-body-md font-body-md text-on-surface">Affiliated with NCERT Syllabus &amp; KSEAB State Board, producing 100% SSLC pass results consistently.</p>
-          </div>
+      <div class="lg:col-span-1">
+        <h2 class="text-headline-lg font-headline-lg text-primary mb-4">Our Curriculum</h2>
+        <p class="text-body-md font-body-md text-on-surface-variant mb-6">We strive to meet the scholastic demands of
+          the NCERT syllabus through creative planning. Approximately 80% of teaching time is dedicated towards academic
+          subjects, supplemented with modern Robotics, A.I., and Coding programs.</p>
+        <div class="p-6 bg-surface-container rounded-lg border border-outline-variant">
+          <span class="material-symbols-outlined text-secondary text-4xl mb-2">school</span>
+          <h4 class="text-label-md font-label-md text-secondary uppercase mb-2">Syllabus &amp; Affiliation</h4>
+          <p class="text-body-md font-body-md text-on-surface">Affiliated with NCERT Syllabus &amp; KSEAB State Board,
+            producing 100% SSLC pass results consistently.</p>
         </div>
-        <div class="lg:col-span-2 space-y-4">
-          <!-- Accordion Item 1 -->
-          <div class="accordion-item bg-white border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 active">
-            <button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colors" onclick="this.parentElement.classList.toggle('active')">
-              <span class="text-headline-md font-headline-md text-primary">Primary &amp; Elementary School (Standard 1-5)</span>
-              <span class="material-symbols-outlined accordion-icon transition-transform duration-300 text-secondary">expand_more</span>
-            </button>
-            <div class="accordion-content">
-              <div class="p-6 pt-0 border-t border-outline-variant/30">
-                <p class="text-body-md font-body-md text-on-surface-variant mb-4">Compulsory computer education starts right from 1st standard with individual systems in our 3rd-floor computer lab. Concept-based teaching develops the right frame of mind and social consciousness.</p>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <li class="flex items-center gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> English, Hindi &amp; Kannada Languages</li>
-                  <li class="flex items-center gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Mathematics &amp; Science Labs</li>
-                  <li class="flex items-center gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Basic Computer Course &amp; Multimedia</li>
-                  <li class="flex items-center gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Fine Arts, Music &amp; Theater</li>
-                </ul>
-              </div>
+      </div>
+      <div class="lg:col-span-2 space-y-4">
+        <!-- Accordion Item 1 -->
+        <div
+          class="accordion-item bg-white border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 active">
+          <button
+            class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colors"
+            onclick="this.parentElement.classList.toggle('active')">
+            <span class="text-headline-md font-headline-md text-primary">Primary &amp; Elementary School (Standard
+              1-5)</span>
+            <span
+              class="material-symbols-outlined accordion-icon transition-transform duration-300 text-secondary">expand_more</span>
+          </button>
+          <div class="accordion-content">
+            <div class="p-6 pt-0 border-t border-outline-variant/30">
+              <p class="text-body-md font-body-md text-on-surface-variant mb-4">Compulsory computer education starts
+                right from 1st standard with individual systems in our 3rd-floor computer lab. Concept-based teaching
+                develops the right frame of mind and social consciousness.</p>
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <li class="flex items-center gap-2 text-body-md"><span
+                    class="material-symbols-outlined text-secondary text-sm"
+                    style="font-variation-settings: 'FILL' 1;">check_circle</span> English, Hindi &amp; Kannada
+                  Languages</li>
+                <li class="flex items-center gap-2 text-body-md"><span
+                    class="material-symbols-outlined text-secondary text-sm"
+                    style="font-variation-settings: 'FILL' 1;">check_circle</span> Mathematics &amp; Science Labs</li>
+                <li class="flex items-center gap-2 text-body-md"><span
+                    class="material-symbols-outlined text-secondary text-sm"
+                    style="font-variation-settings: 'FILL' 1;">check_circle</span> Basic Computer Course &amp;
+                  Multimedia</li>
+                <li class="flex items-center gap-2 text-body-md"><span
+                    class="material-symbols-outlined text-secondary text-sm"
+                    style="font-variation-settings: 'FILL' 1;">check_circle</span> Fine Arts, Music &amp; Theater</li>
+              </ul>
             </div>
           </div>
-          <!-- Accordion Item 2 -->
-          <div class="accordion-item bg-white border border-outline-variant rounded-lg overflow-hidden transition-all duration-300">
-            <button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colors" onclick="this.parentElement.classList.toggle('active')">
-              <span class="text-headline-md font-headline-md text-primary">Middle &amp; Secondary School (Standard 6-10)</span>
-              <span class="material-symbols-outlined accordion-icon transition-transform duration-300 text-secondary">expand_more</span>
-            </button>
-            <div class="accordion-content">
-              <div class="p-6 pt-0 border-t border-outline-variant/30">
-                <p class="text-body-md font-body-md text-on-surface-variant mb-4">Advanced NCERT curriculum preparing students for matriculation (Class X) SSLC exams with 100% distinction track record.</p>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <li class="flex items-center gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Robotics, A.I. &amp; Coding Subjects</li>
-                  <li class="flex items-center gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Physics, Chemistry &amp; Biology Labs</li>
-                  <li class="flex items-center gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Mathematics Geometrical Lab</li>
-                  <li class="flex items-center gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Digital Smart Classrooms</li>
-                </ul>
-              </div>
+        </div>
+        <!-- Accordion Item 2 -->
+        <div
+          class="accordion-item bg-white border border-outline-variant rounded-lg overflow-hidden transition-all duration-300">
+          <button
+            class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colors"
+            onclick="this.parentElement.classList.toggle('active')">
+            <span class="text-headline-md font-headline-md text-primary">Middle &amp; Secondary School (Standard
+              6-10)</span>
+            <span
+              class="material-symbols-outlined accordion-icon transition-transform duration-300 text-secondary">expand_more</span>
+          </button>
+          <div class="accordion-content">
+            <div class="p-6 pt-0 border-t border-outline-variant/30">
+              <p class="text-body-md font-body-md text-on-surface-variant mb-4">Advanced NCERT curriculum preparing
+                students for matriculation (Class X) SSLC exams with 100% distinction track record.</p>
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <li class="flex items-center gap-2 text-body-md"><span
+                    class="material-symbols-outlined text-secondary text-sm"
+                    style="font-variation-settings: 'FILL' 1;">check_circle</span> Robotics, A.I. &amp; Coding Subjects
+                </li>
+                <li class="flex items-center gap-2 text-body-md"><span
+                    class="material-symbols-outlined text-secondary text-sm"
+                    style="font-variation-settings: 'FILL' 1;">check_circle</span> Physics, Chemistry &amp; Biology Labs
+                </li>
+                <li class="flex items-center gap-2 text-body-md"><span
+                    class="material-symbols-outlined text-secondary text-sm"
+                    style="font-variation-settings: 'FILL' 1;">check_circle</span> Mathematics Geometrical Lab</li>
+                <li class="flex items-center gap-2 text-body-md"><span
+                    class="material-symbols-outlined text-secondary text-sm"
+                    style="font-variation-settings: 'FILL' 1;">check_circle</span> Digital Smart Classrooms</li>
+              </ul>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
     <!-- Pedagogy / Methodology -->
     <section class="bg-primary text-on-primary py-section-gap">
       <div class="px-margin-desktop max-w-container-max mx-auto text-center mb-16">
         <h2 class="text-headline-lg font-headline-lg mb-4 text-white">Our Pedagogical Approach</h2>
-        <p class="text-body-lg font-body-lg text-primary-fixed max-w-3xl mx-auto">Blending rigorous academic education with spiritual, cultural, and physical development.</p>
+        <p class="text-body-lg font-body-lg text-primary-fixed max-w-3xl mx-auto">Blending rigorous academic education
+          with spiritual, cultural, and physical development.</p>
       </div>
       <div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter">
         <!-- Individual Care -->
-        <div class="flex gap-6 p-8 bg-primary-container rounded-lg border border-on-primary-container/20 group hover:border-secondary transition-all">
+        <div
+          class="flex gap-6 p-8 bg-primary-container rounded-lg border border-on-primary-container/20 group hover:border-secondary transition-all">
           <div class="bg-surface-container-lowest text-primary p-4 rounded-full h-fit flex items-center justify-center">
             <span class="material-symbols-outlined text-3xl">groups</span>
           </div>
           <div>
             <h3 class="text-headline-md font-headline-md mb-3 text-white">20 : 1 Student-Teacher Ratio</h3>
-            <p class="text-body-md font-body-md text-primary-fixed-dim">Every class has limited seats ensuring individual attention. Students with severe learning needs receive special attention to gradually integrate into mainstream learning.</p>
+            <p class="text-body-md font-body-md text-primary-fixed-dim">Every class has limited seats ensuring
+              individual attention. Students with severe learning needs receive special attention to gradually integrate
+              into mainstream learning.</p>
           </div>
         </div>
         <!-- Modern STEM & Coding -->
-        <div class="flex gap-6 p-8 bg-primary-container rounded-lg border border-on-primary-container/20 group hover:border-secondary transition-all">
+        <div
+          class="flex gap-6 p-8 bg-primary-container rounded-lg border border-on-primary-container/20 group hover:border-secondary transition-all">
           <div class="bg-surface-container-lowest text-primary p-4 rounded-full h-fit flex items-center justify-center">
             <span class="material-symbols-outlined text-3xl">terminal</span>
           </div>
           <div>
             <h3 class="text-headline-md font-headline-md mb-3 text-white">Robotics, A.I. &amp; Coding</h3>
-            <p class="text-body-md font-body-md text-primary-fixed-dim">Hands-on practical training in computer science, robotics, and artificial intelligence to prepare students for the fast-growing technological world.</p>
+            <p class="text-body-md font-body-md text-primary-fixed-dim">Hands-on practical training in computer science,
+              robotics, and artificial intelligence to prepare students for the fast-growing technological world.</p>
           </div>
         </div>
       </div>
@@ -236,12 +278,14 @@
       <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
         <div class="max-w-xl">
           <h2 class="text-headline-lg font-headline-lg text-primary mb-4">Dedicated Teaching Faculty</h2>
-          <p class="text-body-md font-body-md text-on-surface-variant">Our experienced faculty employs diverse teaching styles and practical activities to nurture every student's potential.</p>
+          <p class="text-body-md font-body-md text-on-surface-variant">Our experienced faculty employs diverse teaching
+            styles and practical activities to nurture every student's potential.</p>
         </div>
         <div class="flex gap-4">
           <div class="text-center px-6 py-4 border-l border-outline-variant">
             <div class="text-headline-md font-headline-md text-secondary">20 : 1</div>
-            <div class="text-caption font-caption text-on-surface-variant uppercase tracking-wider">Student-Teacher Ratio</div>
+            <div class="text-caption font-caption text-on-surface-variant uppercase tracking-wider">Student-Teacher
+              Ratio</div>
           </div>
           <div class="text-center px-6 py-4 border-l border-outline-variant">
             <div class="text-headline-md font-headline-md text-secondary">29+ Years</div>
@@ -347,8 +391,9 @@
   </main>
   <!-- Modular Footer -->
   <div id="footer-placeholder"></div>
-  
+
   <script src="assets/js/components.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
+
 </html>

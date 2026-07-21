@@ -26,10 +26,6 @@
           <span class="material-symbols-outlined text-[14px] text-[#FEF08A]">school</span>
           KSEAB State Board
         </span>
-        <a href="admin/login.html" class="text-[#FEF08A] hover:underline flex items-center gap-1 font-bold no-underline ms-2">
-          <span class="material-symbols-outlined text-[14px]">lock</span>
-          Admin Portal
-        </a>
       </div>
     </div>
   </div>
@@ -39,7 +35,7 @@
     <!-- School Logo Brand -->
     <a href="index.html" class="flex items-center gap-3 no-underline group flex-shrink-0">
       <div class="relative p-1 rounded-full bg-emerald-50/60 border border-emerald-100 group-hover:border-[#E0701B]/40 transition-colors">
-        <img src="assets/images/logo.png" alt="Godwin Public School Emblem" class="w-11 h-11 md:w-13 md:h-13 object-contain filter drop-shadow group-hover:scale-105 transition-transform">
+        <img src="assets/images/logo.png" alt="Godwin Public School Emblem" class="w-11 h-11 md:w-13 md:h-13 object-contain filter drop-shadow group-hover:scale-105 transition-transform" onError="this.src='assets/images/favicon.svg';">
       </div>
       <div class="flex flex-col">
         <span class="text-[#0D4234] font-extrabold text-xl md:text-2xl leading-none tracking-tight whitespace-nowrap group-hover:text-[#0A3328] transition-colors">
@@ -51,15 +47,58 @@
       </div>
     </a>
 
-    <!-- Desktop Navigation Links -->
+    <!-- Desktop Navigation Links with Dropdowns -->
     <div class="hidden lg:flex items-center gap-1 xl:gap-2">
-      <a href="index.html" data-nav="index" class="nav-link font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50/50 px-3.5 py-2 rounded-lg transition-all whitespace-nowrap">Home</a>
-      <a href="about.html" data-nav="about" class="nav-link font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50/50 px-3.5 py-2 rounded-lg transition-all whitespace-nowrap">About Us</a>
-      <a href="academics.html" data-nav="academics" class="nav-link font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50/50 px-3.5 py-2 rounded-lg transition-all whitespace-nowrap">Academics</a>
-      <a href="admissions.html" data-nav="admissions" class="nav-link font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50/50 px-3.5 py-2 rounded-lg transition-all whitespace-nowrap">Admissions</a>
-      <a href="facilities.html" data-nav="facilities" class="nav-link font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50/50 px-3.5 py-2 rounded-lg transition-all whitespace-nowrap">Facilities</a>
-      <a href="gallery.html" data-nav="gallery" class="nav-link font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50/50 px-3.5 py-2 rounded-lg transition-all whitespace-nowrap">Gallery</a>
-      <a href="contact.html" data-nav="contact" class="nav-link font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50/50 px-3.5 py-2 rounded-lg transition-all whitespace-nowrap">Contact Us</a>
+      <!-- Home -->
+      <a href="index.html" data-nav="index" class="nav-link font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50/50 px-3 py-2 rounded-lg transition-all whitespace-nowrap">Home</a>
+
+      <!-- About Us Dropdown -->
+      <div class="relative group">
+        <a href="about.html" data-nav="about" class="nav-link font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50/50 px-3 py-2 rounded-lg transition-all inline-flex items-center gap-1 whitespace-nowrap">
+          <span>About Us</span>
+          <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+        </a>
+        <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 animate-fadeIn">
+          <a href="about.html#about-school" class="block px-4 py-2 text-xs font-bold text-slate-700 hover:bg-emerald-50 hover:text-[#0D4234]">About School</a>
+          <a href="about.html#founder" class="block px-4 py-2 text-xs font-bold text-slate-700 hover:bg-emerald-50 hover:text-[#0D4234]">Founder &amp; Trust</a>
+          <a href="about.html#staff" class="block px-4 py-2 text-xs font-bold text-slate-700 hover:bg-emerald-50 hover:text-[#0D4234]">Teachers &amp; Staff</a>
+        </div>
+      </div>
+
+      <!-- Services / Facilities Dropdown -->
+      <div class="relative group">
+        <a href="facilities.html" data-nav="facilities" class="nav-link font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50/50 px-3 py-2 rounded-lg transition-all inline-flex items-center gap-1 whitespace-nowrap">
+          <span>Services</span>
+          <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+        </a>
+        <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 animate-fadeIn">
+          <a href="facilities.html#services" class="block px-4 py-2 text-xs font-bold text-slate-700 hover:bg-emerald-50 hover:text-[#0D4234]">Our Services</a>
+          <a href="facilities.html#robotics" class="block px-4 py-2 text-xs font-bold text-slate-700 hover:bg-emerald-50 hover:text-[#0D4234]">Robotics &amp; AI</a>
+          <a href="facilities.html#library" class="block px-4 py-2 text-xs font-bold text-slate-700 hover:bg-emerald-50 hover:text-[#0D4234]">Library &amp; Reading Room</a>
+          <a href="facilities.html#transport" class="block px-4 py-2 text-xs font-bold text-slate-700 hover:bg-emerald-50 hover:text-[#0D4234]">Transport &amp; School Vans</a>
+        </div>
+      </div>
+
+      <!-- Academics -->
+      <a href="academics.html" data-nav="academics" class="nav-link font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50/50 px-3 py-2 rounded-lg transition-all whitespace-nowrap">Academics</a>
+
+      <!-- Admissions & Application Dropdown -->
+      <div class="relative group">
+        <a href="admissions.html" data-nav="admissions" class="nav-link font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50/50 px-3 py-2 rounded-lg transition-all inline-flex items-center gap-1 whitespace-nowrap">
+          <span>Admissions</span>
+          <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+        </a>
+        <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 animate-fadeIn">
+          <a href="admissions.html#enquiry" class="block px-4 py-2 text-xs font-bold text-slate-700 hover:bg-emerald-50 hover:text-[#0D4234]">Admissions Enquiry</a>
+          <a href="admissions.html#application" class="block px-4 py-2 text-xs font-bold text-slate-700 hover:bg-emerald-50 hover:text-[#0D4234]">Online Application</a>
+        </div>
+      </div>
+
+      <!-- Gallery -->
+      <a href="gallery.html" data-nav="gallery" class="nav-link font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50/50 px-3 py-2 rounded-lg transition-all whitespace-nowrap">Gallery</a>
+
+      <!-- Contact Us -->
+      <a href="contact.html" data-nav="contact" class="nav-link font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50/50 px-3 py-2 rounded-lg transition-all whitespace-nowrap">Contact Us</a>
       
       <a href="admissions.html" class="ml-2 bg-gradient-to-r from-[#E0701B] to-[#C65D0F] hover:from-[#F07B24] hover:to-[#B8530B] text-white font-bold px-4 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all inline-flex items-center gap-2 no-underline text-xs tracking-wide whitespace-nowrap">
         <span class="material-symbols-outlined text-[16px] text-white">edit_note</span>
@@ -76,10 +115,30 @@
   <!-- Mobile Slide-Down Menu Drawer (Pure Tailwind) -->
   <div id="tw-mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-lg border-b border-gray-200 px-4 py-4 space-y-2 transition-all duration-300">
     <a href="index.html" data-nav="index" class="nav-link block font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50 px-4 py-2.5 rounded-lg transition-all">Home</a>
-    <a href="about.html" data-nav="about" class="nav-link block font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50 px-4 py-2.5 rounded-lg transition-all">About Us</a>
+    
+    <div class="space-y-1 pl-2 border-l-2 border-emerald-200">
+      <span class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider px-2 pt-1">About Us</span>
+      <a href="about.html#about-school" class="block font-medium text-slate-700 hover:text-[#0D4234] px-2 py-1 text-sm">About School</a>
+      <a href="about.html#founder" class="block font-medium text-slate-700 hover:text-[#0D4234] px-2 py-1 text-sm">Founder &amp; Trust</a>
+      <a href="about.html#staff" class="block font-medium text-slate-700 hover:text-[#0D4234] px-2 py-1 text-sm">Teachers &amp; Staff</a>
+    </div>
+
+    <div class="space-y-1 pl-2 border-l-2 border-amber-200">
+      <span class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider px-2 pt-1">Services</span>
+      <a href="facilities.html#services" class="block font-medium text-slate-700 hover:text-[#0D4234] px-2 py-1 text-sm">Our Services</a>
+      <a href="facilities.html#robotics" class="block font-medium text-slate-700 hover:text-[#0D4234] px-2 py-1 text-sm">Robotics &amp; AI</a>
+      <a href="facilities.html#library" class="block font-medium text-slate-700 hover:text-[#0D4234] px-2 py-1 text-sm">Library</a>
+      <a href="facilities.html#transport" class="block font-medium text-slate-700 hover:text-[#0D4234] px-2 py-1 text-sm">Transport</a>
+    </div>
+
     <a href="academics.html" data-nav="academics" class="nav-link block font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50 px-4 py-2.5 rounded-lg transition-all">Academics</a>
-    <a href="admissions.html" data-nav="admissions" class="nav-link block font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50 px-4 py-2.5 rounded-lg transition-all">Admissions</a>
-    <a href="facilities.html" data-nav="facilities" class="nav-link block font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50 px-4 py-2.5 rounded-lg transition-all">Facilities</a>
+    
+    <div class="space-y-1 pl-2 border-l-2 border-blue-200">
+      <span class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider px-2 pt-1">Admissions</span>
+      <a href="admissions.html#enquiry" class="block font-medium text-slate-700 hover:text-[#0D4234] px-2 py-1 text-sm">Enquiry</a>
+      <a href="admissions.html#application" class="block font-medium text-slate-700 hover:text-[#0D4234] px-2 py-1 text-sm">Application</a>
+    </div>
+
     <a href="gallery.html" data-nav="gallery" class="nav-link block font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50 px-4 py-2.5 rounded-lg transition-all">Gallery</a>
     <a href="contact.html" data-nav="contact" class="nav-link block font-bold text-[#2B303A] hover:text-[#0D4234] hover:bg-emerald-50 px-4 py-2.5 rounded-lg transition-all">Contact Us</a>
     
