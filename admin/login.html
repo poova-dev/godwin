@@ -100,7 +100,7 @@
             sessionStorage.setItem('godwin_admin_authenticated', 'true');
             submitBtn.innerHTML = `<span class="material-symbols-outlined text-lg">check_circle</span> <span>Access Granted</span>`;
             setTimeout(() => {
-              window.location.href = 'dashboard.html';
+              window.location.href = 'index.html';
             }, 400);
             return;
           } else {
@@ -120,7 +120,7 @@
         sessionStorage.setItem('godwin_admin_authenticated', 'true');
         submitBtn.innerHTML = `<span class="material-symbols-outlined text-lg">check_circle</span> <span>Access Granted</span>`;
         setTimeout(() => {
-          window.location.href = 'dashboard.html';
+          window.location.href = 'index.html';
         }, 400);
       } else {
         errorMsg.textContent = 'Invalid admin password. Please try again.';
