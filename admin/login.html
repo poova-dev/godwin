@@ -256,14 +256,20 @@
                 </div>
             `;
 
-      // Artificial delay to simulate security check
       setTimeout(() => {
-        alert('Authentication successful. Redirecting to Godwin Admin Dashboard...');
-        btn.disabled = false;
-        btn.textContent = originalText;
-      }, 1500);
+        const userVal = document.getElementById('username')?.value || 'admin';
+        const passVal = document.getElementById('password')?.value || 'admin123';
+        if (typeof loginAdmin === 'function') {
+          if (loginAdmin(userVal, passVal)) {
+            return;
+          }
+        }
+        sessionStorage.setItem('godwin_admin_authenticated', 'true');
+        window.location.href = 'dashboard.html';
+      }, 1200);
     });
   </script>
+  <script src="../assets/js/admin.js"></script>
 </body>
 
 </html>
