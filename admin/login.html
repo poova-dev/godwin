@@ -1,275 +1,124 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en">
-
+<html lang="en" class="h-full bg-[#03224d]">
 <head>
   <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Login | Godwin Admin</title>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet" />
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          "colors": {
-            "on-secondary": "#ffffff",
-            "surface-container-highest": "#e1e3e4",
-            "surface-bright": "#f8f9fa",
-            "on-secondary-fixed-variant": "#5d4200",
-            "on-error-container": "#93000a",
-            "surface": "#f8f9fa",
-            "surface-tint": "#475e8c",
-            "on-tertiary": "#ffffff",
-            "tertiary-fixed": "#dce3ed",
-            "primary-fixed": "#d8e2ff",
-            "on-tertiary-container": "#9ba2ac",
-            "surface-container-lowest": "#ffffff",
-            "on-primary-container": "#8ba2d5",
-            "on-background": "#191c1d",
-            "surface-container-low": "#f3f4f5",
-            "tertiary-container": "#323941",
-            "error-container": "#ffdad6",
-            "primary-container": "#1f3864",
-            "surface-container": "#edeeef",
-            "error": "#ba1a1a",
-            "surface-dim": "#d9dadb",
-            "on-error": "#ffffff",
-            "secondary-container": "#fdc34d",
-            "surface-variant": "#e1e3e4",
-            "on-primary": "#ffffff",
-            "outline-variant": "#c4c6d0",
-            "on-surface-variant": "#44474f",
-            "surface-container-high": "#e7e8e9",
-            "on-tertiary-fixed-variant": "#40474f",
-            "secondary-fixed-dim": "#f7bd48",
-            "inverse-surface": "#2e3132",
-            "background": "#f8f9fa",
-            "tertiary": "#1c242b",
-            "secondary-fixed": "#ffdea6",
-            "tertiary-fixed-dim": "#c0c7d1",
-            "outline": "#747780",
-            "on-secondary-fixed": "#271900",
-            "inverse-on-surface": "#f0f1f2",
-            "on-secondary-container": "#715000",
-            "secondary": "#D97706",
-            "on-primary-fixed-variant": "#2e4673",
-            "primary": "#0A5C36",
-            "inverse-primary": "#afc6fb",
-            "on-surface": "#191c1d",
-            "primary-fixed-dim": "#afc6fb",
-            "on-primary-fixed": "#001a41",
-            "on-tertiary-fixed": "#151c23"
-          },
-          "borderRadius": {
-            "DEFAULT": "0.125rem",
-            "lg": "0.25rem",
-            "xl": "0.5rem",
-            "full": "0.75rem"
-          },
-          "spacing": {
-            "cell-padding-h": "16px",
-            "container-max": "1440px",
-            "cell-padding-v": "12px",
-            "sidebar-width": "260px",
-            "gutter": "24px"
-          },
-          "fontFamily": {
-            "body-md": ["Inter"],
-            "label-md": ["Inter"],
-            "headline-lg": ["Inter"],
-            "body-sm": ["Inter"],
-            "body-lg": ["Inter"],
-            "headline-sm": ["Inter"],
-            "mono-sm": ["JetBrains Mono"],
-            "headline-md": ["Inter"]
-          },
-          "fontSize": {
-            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
-            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
-            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
-            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
-            "mono-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
-            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
-          }
-        },
-      },
-    }
-  </script>
-  <style>
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    }
-
-    .bg-login-gradient {
-      background: radial-gradient(circle at center, #054326 0%, #0A5C36 100%);
-    }
-
-    .input-focus-gold:focus {
-      border-color: #D97706 !important;
-      box-shadow: 0 0 0 1px #D97706 !important;
-      outline: none;
-    }
-
-    .transition-standard {
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Portal Login | Godwin Public School</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet" />
 </head>
+<body class="h-full bg-gradient-to-br from-[#03224d] via-[#0D4234] to-[#01142d] text-white font-sans flex items-center justify-center p-4">
+  <div class="w-full max-w-md bg-white/10 backdrop-blur-xl border border-white/15 rounded-3xl p-8 shadow-2xl space-y-6 relative overflow-hidden">
+    <!-- Top Brand Header -->
+    <div class="text-center space-y-3">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/10 border border-white/20 shadow-inner">
+        <img src="../assets/images/logo.png" alt="Godwin Emblem" class="w-10 h-10 object-contain drop-shadow" onError="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <span class="material-symbols-outlined text-3xl text-[#ffdea6] hidden">school</span>
+      </div>
+      <h1 class="text-2xl font-extrabold tracking-tight text-white">Godwin Public School</h1>
+      <p class="text-xs uppercase tracking-widest text-[#ffdea6] font-semibold">Admin Control Panel</p>
+    </div>
 
-<body
-  class="bg-login-gradient min-h-screen flex items-center justify-center font-body-md text-on-surface antialiased p-gutter relative overflow-hidden">
-  <!-- Background Atmospheric Elements -->
-  <div class="absolute inset-0 pointer-events-none opacity-20">
-    <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-primary-container blur-[120px]">
+    <!-- Error Alert Banner -->
+    <div id="errorAlert" class="hidden p-3.5 rounded-xl bg-red-500/20 border border-red-500/40 text-red-200 text-xs font-semibold text-center animate-pulse">
+      <span id="errorMessage">Invalid password. Please try again.</span>
     </div>
-    <div
-      class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] rounded-full bg-secondary blur-[100px] opacity-30">
-    </div>
-  </div>
-  <!-- Login Container -->
-  <div class="relative z-10 w-full max-w-[420px]">
-    <!-- Secure Portal Badge -->
-    <div class="flex flex-col items-center mb-8 animate-fade-in">
-      <div
-        class="bg-white/5 backdrop-blur-sm border border-white/10 px-4 py-2 rounded-full flex items-center gap-2 mb-6">
-        <span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim"
-          style="font-variation-settings: 'FILL' 1;">lock</span>
-        <span class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest">Secure Portal</span>
-      </div>
-      <div class="flex flex-col items-center">
-        <div class="w-20 h-20 bg-white rounded-xl shadow-lg flex items-center justify-center p-3 mb-4">
-          <img class="w-full h-full object-contain"
-            data-alt="A clean, minimalist vector logo for Godwin Public School, featuring an open book and a classic quill in deep navy blue and gold colors. The style is academic, professional, and institutional, set against a pristine white background with sharp edges and premium corporate finish."
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlXoZgFMoT5WV69rtUpqzm-UfYUIkQ0nCuVCwnLPUCQ23Vrn5RBZIbyg779vTuxmI76gnE-Kc-ur8VEnhYRASbqqdWVpXdMOUtRo_RXM7hBxdaaaZbjzifXt5xx7A-nhdgDU1lV_ClyrdWQvijqxW2Cbssj-FKPmc6fwI43ifWe2Qt2HoSudJQVL1X8uV5qWw0nMs-TW4kMU3QDJre3jG-BvB0fw4tUeCVq38o1sHHAryF8OdHf_LXeczNe2_myWH0NRxMbqxs93I" />
-        </div>
-        <h1 class="font-headline-sm text-headline-sm text-white tracking-tight">Godwin Admin</h1>
-        <p class="font-body-md text-body-md text-primary-fixed/60 mt-1">Public School System</p>
-      </div>
-    </div>
-    <!-- Login Card -->
-    <main class="bg-white rounded-lg shadow-2xl overflow-hidden border border-white/20">
-      <div class="p-8 md:p-10">
-        <form class="space-y-6" id="loginForm">
-          <!-- Username Field -->
-          <div class="space-y-2">
-            <label class="block font-label-md text-label-md text-on-surface-variant" for="username">USERNAME</label>
-            <div class="relative">
-              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <span class="material-symbols-outlined text-outline text-[20px]">person</span>
-              </div>
-              <input
-                class="w-full bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md rounded-lg py-3 pl-10 pr-4 input-focus-gold transition-standard"
-                id="username" name="username" placeholder="Enter administrator ID" required="" type="text" />
-            </div>
-          </div>
-          <!-- Password Field -->
-          <div class="space-y-2">
-            <div class="flex justify-between items-center">
-              <label class="block font-label-md text-label-md text-on-surface-variant" for="password">PASSWORD</label>
-              <a class="font-label-md text-label-md text-secondary hover:text-secondary-fixed-dim transition-standard"
-                href="#">Forgot password?</a>
-            </div>
-            <div class="relative">
-              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <span class="material-symbols-outlined text-outline text-[20px]">lock</span>
-              </div>
-              <input
-                class="w-full bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md rounded-lg py-3 pl-10 pr-12 input-focus-gold transition-standard"
-                id="password" name="password" placeholder="••••••••" required="" type="password" />
-              <button
-                class="absolute inset-y-0 right-0 pr-3 flex items-center text-outline hover:text-on-surface-variant transition-standard"
-                onclick="togglePassword()" type="button">
-                <span class="material-symbols-outlined text-[20px]" id="visibility-icon">visibility</span>
-              </button>
-            </div>
-          </div>
-          <!-- Submit Button -->
-          <button
-            class="w-full bg-secondary hover:bg-secondary-fixed-dim text-white font-headline-sm text-[16px] py-4 rounded-lg shadow-md hover:shadow-lg active:scale-[0.98] transition-all duration-200 uppercase tracking-wider font-bold"
-            type="submit">
-            Login
+
+    <!-- Login Form -->
+    <form id="adminLoginForm" class="space-y-4">
+      <div>
+        <label class="block text-xs font-bold uppercase tracking-wider text-white/80 mb-1.5" for="adminPassword">Master Admin Password</label>
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-white/50 text-xl">lock</span>
+          <input
+            id="adminPassword"
+            name="password"
+            type="password"
+            required
+            placeholder="Enter admin password"
+            class="w-full pl-11 pr-11 py-3.5 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#ffdea6] focus:border-transparent text-sm transition-all"
+          />
+          <button type="button" onclick="togglePasswordVisibility()" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors">
+            <span id="visibilityIcon" class="material-symbols-outlined text-xl">visibility</span>
           </button>
-        </form>
-        <!-- Information Section -->
-        <div class="mt-8 pt-6 border-t border-surface-container-highest">
-          <p class="font-body-sm text-body-sm text-on-surface-variant text-center">
-            Access is restricted to authorized school personnel. Unauthorized access attempts are logged and monitored.
-          </p>
         </div>
       </div>
-      <!-- Footer Progress/Decoration -->
-      <div class="h-1.5 w-full bg-surface-container flex">
-        <div class="h-full w-1/3 bg-secondary"></div>
-        <div class="h-full w-1/3 bg-primary"></div>
-        <div class="h-full w-1/3 bg-primary-container"></div>
-      </div>
-    </main>
-    <!-- Legal/Help Footer -->
-    <footer class="mt-8 flex justify-center gap-6">
-      <a class="font-label-md text-label-md text-primary-fixed/40 hover:text-white transition-standard" href="#">Terms
-        of Service</a>
-      <a class="font-label-md text-label-md text-primary-fixed/40 hover:text-white transition-standard" href="#">Privacy
-        Policy</a>
-      <a class="font-label-md text-label-md text-primary-fixed/40 hover:text-white transition-standard" href="#">Help
-        Desk</a>
-    </footer>
+
+      <button
+        type="submit"
+        id="loginSubmitBtn"
+        class="w-full py-3.5 px-4 bg-gradient-to-r from-[#E0701B] to-[#7b5800] hover:from-[#f7bd48] hover:to-[#E0701B] text-white font-bold text-sm uppercase tracking-wider rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 active:scale-[0.98]">
+        <span class="material-symbols-outlined text-lg">login</span>
+        <span>Authenticate &amp; Enter</span>
+      </button>
+    </form>
+
+    <!-- Footer info -->
+    <div class="pt-4 border-t border-white/10 text-center">
+      <p class="text-[11px] text-white/60">
+        Protected by Cloudflare Functions &amp; KV Security • Sahakar Nagar Campus
+      </p>
+    </div>
   </div>
-  <!-- Micro-interactions Script -->
+
+  <script src="../assets/js/admin.js"></script>
   <script>
-    function togglePassword() {
-      const passwordInput = document.getElementById('password');
-      const visibilityIcon = document.getElementById('visibility-icon');
-      if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        visibilityIcon.textContent = 'visibility_off';
+    function togglePasswordVisibility() {
+      const passInput = document.getElementById('adminPassword');
+      const icon = document.getElementById('visibilityIcon');
+      if (passInput.type === 'password') {
+        passInput.type = 'text';
+        icon.textContent = 'visibility_off';
       } else {
-        passwordInput.type = 'password';
-        visibilityIcon.textContent = 'visibility';
+        passInput.type = 'password';
+        icon.textContent = 'visibility';
       }
     }
 
-    // Simple form submission animation
-    document.getElementById('loginForm').addEventListener('submit', function (e) {
+    document.getElementById('adminLoginForm').addEventListener('submit', async function(e) {
       e.preventDefault();
-      const btn = e.target.querySelector('button');
-      const originalText = btn.textContent;
-      btn.disabled = true;
-      btn.innerHTML = `
-                <div class="flex items-center justify-center gap-2">
-                    <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    <span>Authenticating...</span>
-                </div>
-            `;
+      const password = document.getElementById('adminPassword').value;
+      const alertBox = document.getElementById('errorAlert');
+      const errorMsg = document.getElementById('errorMessage');
+      const submitBtn = document.getElementById('loginSubmitBtn');
 
-      setTimeout(() => {
-        const userVal = document.getElementById('username')?.value || 'admin';
-        const passVal = document.getElementById('password')?.value || 'admin123';
-        if (typeof loginAdmin === 'function') {
-          if (loginAdmin(userVal, passVal)) {
-            return;
-          }
+      alertBox.classList.add('hidden');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<span class="material-symbols-outlined animate-spin text-lg">sync</span> <span>Verifying...</span>`;
+
+      try {
+        const res = await fetch('/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password })
+        });
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok && data.success) {
+          submitBtn.innerHTML = `<span class="material-symbols-outlined text-lg">check_circle</span> <span>Access Granted</span>`;
+          setTimeout(() => {
+            window.location.href = 'dashboard.html';
+          }, 400);
+        } else {
+          errorMsg.textContent = data.error || 'Invalid password. Please try again.';
+          alertBox.classList.remove('hidden');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `<span class="material-symbols-outlined text-lg">login</span> <span>Authenticate &amp; Enter</span>`;
         }
-        sessionStorage.setItem('godwin_admin_authenticated', 'true');
-        window.location.href = 'dashboard.html';
-      }, 1200);
+      } catch (err) {
+        // Fallback for local preview mode if Cloudflare Functions endpoint is not running locally
+        if (password === 'godwin2026') {
+          sessionStorage.setItem('godwin_admin_authenticated', 'true');
+          window.location.href = 'dashboard.html';
+        } else {
+          errorMsg.textContent = 'Connection error or invalid password.';
+          alertBox.classList.remove('hidden');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `<span class="material-symbols-outlined text-lg">login</span> <span>Authenticate &amp; Enter</span>`;
+        }
+      }
     });
   </script>
-  <script src="../assets/js/admin.js"></script>
 </body>
-
 </html>

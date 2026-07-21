@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Admissions Enquiries | Godwin Admin</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#afc6fb",
+                        "on-primary-container": "#8ba2d5",
+                        "tertiary-container": "#323941",
+                        "on-tertiary-fixed": "#151c23",
+                        "on-primary": "#ffffff",
+                        "primary": "#03224d",
+                        "inverse-on-surface": "#f0f1f2",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f8f9fa",
+                        "on-background": "#191c1d",
+                        "surface": "#f8f9fa",
+                        "on-surface-variant": "#44474f",
+                        "on-secondary-fixed": "#271900",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#fdc34d",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-container": "#edeeef",
+                        "tertiary": "#1c242b",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-dim": "#d9dadb",
+                        "background": "#f8f9fa",
+                        "on-secondary-fixed-variant": "#5d4200",
+                        "on-surface": "#191c1d",
+                        "secondary-fixed": "#ffdea6",
+                        "secondary-fixed-dim": "#f7bd48",
+                        "surface-container-highest": "#e1e3e4",
+                        "secondary": "#7b5800",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#9ba2ac",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e7e8e9",
+                        "outline-variant": "#c4c6d0",
+                        "on-primary-fixed": "#001a41",
+                        "tertiary-fixed-dim": "#c0c7d1",
+                        "inverse-primary": "#afc6fb",
+                        "primary-container": "#1f3864",
+                        "outline": "#747780",
+                        "on-secondary-container": "#715000",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#475e8c",
+                        "tertiary-fixed": "#dce3ed",
+                        "on-tertiary-fixed-variant": "#40474f",
+                        "inverse-surface": "#2e3132",
+                        "on-primary-fixed-variant": "#2e4673"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "cell-padding-v": "12px",
+                        "cell-padding-h": "16px",
+                        "sidebar-width": "260px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "mono-sm": ["JetBrains Mono"],
+                        "headline-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "mono-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #e1e3e4;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c4c6d0;
+        }
+
+        /* Layout Fixes */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .main-canvas {
+            margin-left: 260px;
+            min-height: 100vh;
+        }
+
+        /* Custom Status Badge Styles */
+        .badge-new {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .badge-contacted {
+            background-color: #fff3e0;
+            color: #f57c00;
+        }
+
+        .badge-converted {
+            background-color: #e8f5e9;
+            color: #388e3c;
+        }
+
+        .badge-archive {
+            background-color: #f5f5f5;
+            color: #616161;
+        }
+
+        /* Animation for detail panel */
+        #detail-panel {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .panel-hidden {
+            transform: translateX(100%);
+        }
+
+        .panel-visible {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+
+<body class="font-body-md text-on-surface">
+    <!-- SideNavBar (from JSON) -->
+    <aside
+        class="fixed left-0 top-0 h-full w-[260px] bg-primary dark:bg-primary border-r border-on-primary-fixed-variant flex flex-col z-50">
+        <div class="p-6">
+            <h1 class="font-headline-sm text-headline-sm font-bold text-on-primary">Godwin Admin</h1>
+            <p class="text-xs text-on-primary/60 tracking-wider uppercase mt-1">Public School System</p>
+        </div>
+        <nav class="flex-grow overflow-y-auto mt-4">
+            <a class="flex items-center gap-3 px-4 py-3 text-on-primary/70 hover:bg-white/5 hover:text-on-primary transition-colors active:scale-95 transition-transform"
+                href="#">
+                <span class="material-symbols-outlined">dashboard</span>
+                <span class="font-body-md text-body-md">Dashboard</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-on-primary/70 hover:bg-white/5 hover:text-on-primary transition-colors active:scale-95 transition-transform"
+                href="#">
+                <span class="material-symbols-outlined">description</span>
+                <span class="font-body-md text-body-md">Content</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-on-primary/70 hover:bg-white/5 hover:text-on-primary transition-colors active:scale-95 transition-transform"
+                href="#">
+                <span class="material-symbols-outlined">campaign</span>
+                <span class="font-body-md text-body-md">Announcements</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-on-primary/70 hover:bg-white/5 hover:text-on-primary transition-colors active:scale-95 transition-transform"
+                href="#">
+                <span class="material-symbols-outlined">domain</span>
+                <span class="font-body-md text-body-md">Facilities</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-on-primary/70 hover:bg-white/5 hover:text-on-primary transition-colors active:scale-95 transition-transform"
+                href="#">
+                <span class="material-symbols-outlined">perm_media</span>
+                <span class="font-body-md text-body-md">Media</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-secondary-fixed border-l-4 border-secondary-fixed bg-white/5 active:scale-95 transition-transform"
+                href="#">
+                <span class="material-symbols-outlined"
+                    style="font-variation-settings: 'FILL' 1;">contact_support</span>
+                <span class="font-body-md text-body-md">Enquiries</span>
+            </a>
+            <div class="mt-auto pt-10 pb-6">
+                <a class="flex items-center gap-3 px-4 py-3 text-on-primary/70 hover:bg-white/5 hover:text-on-primary transition-colors active:scale-95 transition-transform"
+                    href="#">
+                    <span class="material-symbols-outlined">settings</span>
+                    <span class="font-body-md text-body-md">Settings</span>
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-on-primary/70 hover:bg-white/5 hover:text-on-primary transition-colors active:scale-95 transition-transform"
+                    href="#">
+                    <span class="material-symbols-outlined text-error">logout</span>
+                    <span class="font-body-md text-body-md text-error">Logout</span>
+                </a>
+            </div>
+        </nav>
+    </aside>
+    <div class="main-canvas">
+        <!-- TopNavBar (from JSON) -->
+        <header
+            class="flex justify-between items-center h-16 px-gutter bg-surface border-b border-surface-container-highest sticky top-0 z-40">
+            <div class="flex items-center gap-4 flex-1">
+                <div class="relative w-full max-w-md">
+                    <span
+                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+                    <input
+                        class="w-full bg-surface-container-low border-none rounded-lg pl-10 text-body-sm focus:ring-2 focus:ring-secondary/50"
+                        placeholder="Search enquiries, parents, or students..." type="text" />
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors relative">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+                </button>
+                <button
+                    class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors">
+                    <span class="material-symbols-outlined">help</span>
+                </button>
+                <div class="h-8 w-[1px] bg-surface-container-highest mx-2"></div>
+                <div class="flex items-center gap-3 cursor-pointer active:opacity-80 transition-opacity">
+                    <div class="text-right hidden sm:block">
+                        <p class="text-label-md font-bold text-primary">Admin User</p>
+                        <p class="text-[10px] text-on-surface-variant leading-none">Registrar Office</p>
+                    </div>
+                    <img class="w-10 h-10 rounded-full border-2 border-surface-container-highest object-cover"
+                        data-alt="A professional headshot of a middle-aged male school administrator with a warm, authoritative smile. He is wearing a sharp navy blue blazer and a crisp white shirt, sitting in a bright, modern office with books and school trophies blurred in the background. High-quality corporate photography style with soft, natural daylight illumination."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaoP-gNVoUM1uSGFsVO837V6daV54mUaYSb9tymSHOdbazYiTK3dWFGqNksf8MzmTRP_Tbpelj1EVw4EHF5LgxcoSqB6oJW7wbpoRetyzu9eJ68C48wJjKZCyOA1Qri7BTuiNmiFCM9IFdnjSj0c91IrBQGfVVSuoA-cuWm7NHjKYk5glKcBiPk7BQtr0xxMlYjeIV0d25-ns0i0qwpI13GasjRnxU1N_Gi_X1L8PI_GuSYdnhpZYSO0uDOobwci9ppGr-lHL3KeU" />
+                </div>
+            </div>
+        </header>
+        <!-- Main Content Area -->
+        <main class="p-gutter max-w-container-max mx-auto">
+            <!-- Page Header -->
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg text-primary">Admissions Enquiries</h2>
+                    <p class="text-on-surface-variant font-body-md">Manage and track prospective student applications.
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button
+                        class="bg-surface-container-lowest border border-outline-variant px-4 py-2 rounded flex items-center gap-2 text-label-md hover:bg-surface-container-low transition-colors">
+                        <span class="material-symbols-outlined text-sm">file_download</span> Export CSV
+                    </button>
+                    <button
+                        class="bg-secondary text-white px-4 py-2 rounded font-bold text-label-md shadow-sm hover:brightness-110 active:scale-95 transition-all flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">add</span> New Enquiry
+                    </button>
+                </div>
+            </div>
+            <!-- Stats Overview (Bento Style) -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+                <div class="bg-white border border-surface-container-highest p-4 rounded-xl">
+                    <p class="text-on-surface-variant text-label-md uppercase tracking-tight">Total Enquiries</p>
+                    <div class="flex items-baseline gap-2 mt-1">
+                        <span class="font-headline-lg text-headline-lg">1,248</span>
+                        <span class="text-green-600 text-xs font-bold">+12%</span>
+                    </div>
+                </div>
+                <div class="bg-white border border-surface-container-highest p-4 rounded-xl">
+                    <p class="text-on-surface-variant text-label-md uppercase tracking-tight">New This Week</p>
+                    <div class="flex items-baseline gap-2 mt-1">
+                        <span class="font-headline-lg text-headline-lg">42</span>
+                        <span class="text-secondary text-xs font-bold">Action Req.</span>
+                    </div>
+                </div>
+                <div class="bg-white border border-surface-container-highest p-4 rounded-xl">
+                    <p class="text-on-surface-variant text-label-md uppercase tracking-tight">Conversion Rate</p>
+                    <div class="flex items-baseline gap-2 mt-1">
+                        <span class="font-headline-lg text-headline-lg">28.4%</span>
+                        <span class="text-on-surface-variant text-xs">Target: 30%</span>
+                    </div>
+                </div>
+                <div class="bg-white border border-surface-container-highest p-4 rounded-xl">
+                    <p class="text-on-surface-variant text-label-md uppercase tracking-tight">Avg. Response Time</p>
+                    <div class="flex items-baseline gap-2 mt-1">
+                        <span class="font-headline-lg text-headline-lg">4.2h</span>
+                        <span class="text-green-600 text-xs font-bold">Fast</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Table Container -->
+            <div class="bg-white border border-surface-container-highest rounded-xl overflow-hidden">
+                <div
+                    class="p-4 border-b border-surface-container-highest flex items-center justify-between bg-surface-container-lowest">
+                    <div class="flex items-center gap-6">
+                        <button class="text-primary font-bold border-b-2 border-secondary pb-1 text-label-md">All
+                            Enquiries</button>
+                        <button
+                            class="text-on-surface-variant hover:text-primary transition-colors pb-1 text-label-md">New
+                            (12)</button>
+                        <button
+                            class="text-on-surface-variant hover:text-primary transition-colors pb-1 text-label-md">Contacted</button>
+                        <button
+                            class="text-on-surface-variant hover:text-primary transition-colors pb-1 text-label-md">Converted</button>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button class="p-1.5 hover:bg-surface-container-low rounded"><span
+                                class="material-symbols-outlined text-sm">filter_list</span></button>
+                        <button class="p-1.5 hover:bg-surface-container-low rounded"><span
+                                class="material-symbols-outlined text-sm">sort</span></button>
+                    </div>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="bg-surface-container-low">
+                            <tr>
+                                <th
+                                    class="py-cell-padding-v px-cell-padding-h text-label-md text-on-surface-variant uppercase border-b border-surface-container-highest">
+                                    Student Name</th>
+                                <th
+                                    class="py-cell-padding-v px-cell-padding-h text-label-md text-on-surface-variant uppercase border-b border-surface-container-highest">
+                                    Parent Name</th>
+                                <th
+                                    class="py-cell-padding-v px-cell-padding-h text-label-md text-on-surface-variant uppercase border-b border-surface-container-highest text-center">
+                                    Grade</th>
+                                <th
+                                    class="py-cell-padding-v px-cell-padding-h text-label-md text-on-surface-variant uppercase border-b border-surface-container-highest">
+                                    Date Received</th>
+                                <th
+                                    class="py-cell-padding-v px-cell-padding-h text-label-md text-on-surface-variant uppercase border-b border-surface-container-highest text-center">
+                                    Status</th>
+                                <th
+                                    class="py-cell-padding-v px-cell-padding-h text-label-md text-on-surface-variant uppercase border-b border-surface-container-highest text-right">
+                                    Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="enquiry-rows">
+                            <!-- JS will populate some rows for variety, but static ones here first -->
+                            <tr class="group hover:bg-surface-container-low transition-colors cursor-pointer border-b border-surface-container-highest"
+                                onclick="openDetails('Arjun Sharma', 'Grade 9', 'Deepak Sharma')">
+                                <td class="py-cell-padding-v px-cell-padding-h font-bold text-primary">Arjun Sharma</td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-on-surface-variant">Deepak Sharma
+                                </td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-center text-body-sm">Grade 9</td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-body-sm font-mono-sm">Oct 12, 2023
+                                </td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-center">
+                                    <span
+                                        class="badge-new px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">New</span>
+                                </td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-right">
+                                    <button class="text-primary hover:underline text-label-md">View</button>
+                                </td>
+                            </tr>
+                            <tr class="group hover:bg-surface-container-low transition-colors cursor-pointer border-b border-surface-container-highest"
+                                onclick="openDetails('Elena Rodriguez', 'Grade 6', 'Maria Rodriguez')">
+                                <td class="py-cell-padding-v px-cell-padding-h font-bold text-primary">Elena Rodriguez
+                                </td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-on-surface-variant">Maria Rodriguez
+                                </td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-center text-body-sm">Grade 6</td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-body-sm font-mono-sm">Oct 11, 2023
+                                </td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-center">
+                                    <span
+                                        class="badge-contacted px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Contacted</span>
+                                </td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-right">
+                                    <button class="text-primary hover:underline text-label-md">View</button>
+                                </td>
+                            </tr>
+                            <tr class="group hover:bg-surface-container-low transition-colors cursor-pointer border-b border-surface-container-highest"
+                                onclick="openDetails('Samuel Thompson', 'Grade 11', 'Keith Thompson')">
+                                <td class="py-cell-padding-v px-cell-padding-h font-bold text-primary">Samuel Thompson
+                                </td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-on-surface-variant">Keith Thompson
+                                </td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-center text-body-sm">Grade 11</td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-body-sm font-mono-sm">Oct 10, 2023
+                                </td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-center">
+                                    <span
+                                        class="badge-converted px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Converted</span>
+                                </td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-right">
+                                    <button class="text-primary hover:underline text-label-md">View</button>
+                                </td>
+                            </tr>
+                            <tr class="group hover:bg-surface-container-low transition-colors cursor-pointer border-b border-surface-container-highest"
+                                onclick="openDetails('Li Wei', 'Grade 4', 'Wei Chen')">
+                                <td class="py-cell-padding-v px-cell-padding-h font-bold text-primary">Li Wei</td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-on-surface-variant">Wei Chen</td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-center text-body-sm">Grade 4</td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-body-sm font-mono-sm">Oct 09, 2023
+                                </td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-center">
+                                    <span
+                                        class="badge-archive px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Archive</span>
+                                </td>
+                                <td class="py-cell-padding-v px-cell-padding-h text-right">
+                                    <button class="text-primary hover:underline text-label-md">View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="p-4 bg-surface-container-low flex items-center justify-between">
+                    <p class="text-on-surface-variant text-body-sm">Showing 1-10 of 1,248 entries</p>
+                    <div class="flex gap-1">
+                        <button
+                            class="p-1 border border-outline-variant rounded hover:bg-white transition-colors disabled:opacity-50"><span
+                                class="material-symbols-outlined text-sm">chevron_left</span></button>
+                        <button class="px-3 py-1 bg-secondary text-white font-bold rounded text-body-sm">1</button>
+                        <button
+                            class="px-3 py-1 hover:bg-white rounded text-body-sm border border-transparent hover:border-outline-variant transition-all">2</button>
+                        <button
+                            class="px-3 py-1 hover:bg-white rounded text-body-sm border border-transparent hover:border-outline-variant transition-all">3</button>
+                        <button class="p-1 border border-outline-variant rounded hover:bg-white transition-colors"><span
+                                class="material-symbols-outlined text-sm">chevron_right</span></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Enquiry Detail Side Panel -->
+    <div class="fixed inset-0 bg-black/40 z-50 hidden opacity-0 transition-opacity duration-300 pointer-events-none"
+        id="detail-overlay" onclick="closeDetails()"></div>
+    <div class="fixed right-0 top-0 h-full w-full md:w-[500px] bg-white shadow-2xl z-[60] panel-hidden flex flex-col"
+        id="detail-panel">
+        <!-- Panel Header -->
+        <div
+            class="p-6 border-b border-surface-container-highest flex justify-between items-start bg-primary text-white">
+            <div>
+                <span
+                    class="badge-new px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest mb-2 inline-block"
+                    id="detail-status">New Enquiry</span>
+                <h3 class="font-headline-sm text-headline-sm" id="detail-name">Arjun Sharma</h3>
+                <p class="text-on-primary/70 text-body-sm" id="detail-grade">Prospective: Grade 9</p>
+            </div>
+            <button class="p-2 hover:bg-white/10 rounded-full transition-colors" onclick="closeDetails()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <!-- Panel Content -->
+        <div class="flex-grow overflow-y-auto p-6 space-y-8">
+            <section>
+                <h4 class="text-label-md text-on-surface-variant uppercase tracking-widest mb-4 border-b pb-1">Contact
+                    Information</h4>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-[10px] text-on-surface-variant uppercase font-bold">Parent Name</p>
+                        <p class="text-body-md font-bold" id="detail-parent">Deepak Sharma</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-on-surface-variant uppercase font-bold">Primary Phone</p>
+                        <p class="text-body-md font-bold">+91 98765 43210</p>
+                    </div>
+                    <div class="col-span-2">
+                        <p class="text-[10px] text-on-surface-variant uppercase font-bold">Email Address</p>
+                        <p class="text-body-md font-bold text-primary underline">deepak.sharma@example.com</p>
+                    </div>
+                    <div class="col-span-2">
+                        <p class="text-[10px] text-on-surface-variant uppercase font-bold">Residential Address</p>
+                        <p class="text-body-md">Flat 402, Skyline Residency, Sector 15, Vashi, Navi Mumbai - 400703</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h4 class="text-label-md text-on-surface-variant uppercase tracking-widest mb-4 border-b pb-1">Enquiry
+                    Details</h4>
+                <div class="space-y-4">
+                    <div>
+                        <p class="text-[10px] text-on-surface-variant uppercase font-bold">Reason for Transfer</p>
+                        <p class="text-body-md bg-surface-container-low p-3 rounded italic">"Looking for a more rigorous
+                            academic curriculum and better sports infrastructure. Arjun is currently competing at the
+                            state level in swimming."</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-[10px] text-on-surface-variant uppercase font-bold">Previous School</p>
+                            <p class="text-body-md">Cambridge International Academy</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-on-surface-variant uppercase font-bold">Expected Joining</p>
+                            <p class="text-body-md">Academic Year 2024-25</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h4 class="text-label-md text-on-surface-variant uppercase tracking-widest mb-4 border-b pb-1">Activity
+                    Log</h4>
+                <div
+                    class="relative pl-6 space-y-6 before:content-[''] before:absolute before:left-0 before:top-2 before:bottom-2 before:w-[2px] before:bg-surface-container-highest">
+                    <div class="relative">
+                        <div
+                            class="absolute -left-7.5 top-1 w-3 h-3 bg-secondary rounded-full border-2 border-white shadow-sm">
+                        </div>
+                        <p class="text-[11px] text-on-surface-variant font-mono-sm">Oct 12, 10:45 AM</p>
+                        <p class="text-body-sm font-bold">Enquiry Form Submitted Online</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Panel Footer Actions -->
+        <div class="p-6 border-t border-surface-container-highest bg-surface-container-lowest grid grid-cols-2 gap-3">
+            <button
+                class="flex items-center justify-center gap-2 py-3 border border-primary text-primary font-bold text-label-md rounded hover:bg-primary/5 transition-all">
+                <span class="material-symbols-outlined text-sm">edit_note</span> Log Follow-up
+            </button>
+            <button
+                class="flex items-center justify-center gap-2 py-3 bg-secondary text-white font-bold text-label-md rounded hover:brightness-110 active:scale-95 transition-all shadow-md">
+                <span class="material-symbols-outlined text-sm">mail</span> Send Email
+            </button>
+            <button
+                class="col-span-2 py-2 text-on-surface-variant text-label-md hover:text-primary transition-colors flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-sm">archive</span> Archive Enquiry
+            </button>
+        </div>
+    </div>
+    <script>
+        function openDetails(name, grade, parent) {
+            const panel = document.getElementById('detail-panel');
+            const overlay = document.getElementById('detail-overlay');
+
+            document.getElementById('detail-name').innerText = name;
+            document.getElementById('detail-grade').innerText = 'Prospective: ' + grade;
+            document.getElementById('detail-parent').innerText = parent;
+
+            // Set random status for demo purposes based on UI
+            const badge = document.getElementById('detail-status');
+            if (name.includes('Arjun')) {
+                badge.innerText = 'New Enquiry';
+                badge.className = 'badge-new px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest mb-2 inline-block';
+            } else if (name.includes('Elena')) {
+                badge.innerText = 'Contacted';
+                badge.className = 'badge-contacted px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest mb-2 inline-block';
+            } else {
+                badge.innerText = 'Converted';
+                badge.className = 'badge-converted px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest mb-2 inline-block';
+            }
+
+            overlay.classList.remove('hidden', 'pointer-events-none');
+            setTimeout(() => {
+                overlay.classList.add('opacity-100');
+                panel.classList.remove('panel-hidden');
+                panel.classList.add('panel-visible');
+            }, 10);
+        }
+
+        function closeDetails() {
+            const panel = document.getElementById('detail-panel');
+            const overlay = document.getElementById('detail-overlay');
+
+            overlay.classList.remove('opacity-100');
+            panel.classList.add('panel-hidden');
+            panel.classList.remove('panel-visible');
+
+            setTimeout(() => {
+                overlay.classList.add('hidden', 'pointer-events-none');
+            }, 300);
+        }
+
+        // Search highlight interaction
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('ring-2', 'ring-secondary/50');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('ring-2', 'ring-secondary/50');
+        });
+    </script>
+</body>
+
+</html>

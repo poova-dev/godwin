@@ -1,0 +1,6 @@
+name = "godwin-public-school"
+pages_build_output_dir = "."
+
+[[kv_namespaces]]
+binding = "GODWIN_KV"
+id = "godwin_kv_namespace_id"

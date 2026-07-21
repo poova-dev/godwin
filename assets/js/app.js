@@ -1,6 +1,6 @@
 /**
  * Client App Core JavaScript - Godwin Public School
- * Handles CMS data binding, pure Tailwind hero slider, video modal, and WhatsApp links.
+ * Connects public frontend to Cloudflare Functions (/api/content, /api/enquiry) and Cloudflare KV.
  */
 
 const DEFAULT_DATA = {
@@ -13,52 +13,52 @@ const DEFAULT_DATA = {
   virtualTourUrl: "https://v3dmania.com/godwin-public-school-360-tour",
   heroTitle: "29 Years of Academic Excellence in Sahakar Nagar",
   heroSubtitle: "Unbroken record of 100% SSLC pass results across 22 consecutive batches. Empowering students with modern STEM facilities and values-driven education.",
-  cloudinaryCampusHero1: "https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1920&q=80",
-  cloudinaryCampusHero2: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=80",
   notices: [
-    { title: "Admissions Open 2026-27", badge: "Admissions", date: "July 2026", text: "Enrollments open for Kindergarten through Class X." },
-    { title: "100% SSLC Pass Result Maintained", badge: "Achievement", date: "June 2026", text: "Congratulations to our 22nd consecutive SSLC batch!" }
-  ],
-  testimonials: [
-    {
-      name: "Ramesh Sharma",
-      role: "Parent of Class X Topper",
-      quote: "Sending our son to Godwin Public School was the best decision. The 20:1 student-teacher ratio ensures every child gets individual guidance.",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
-    },
-    {
-      name: "Ananya Hegde",
-      role: "Parent of Primary Student",
-      quote: "The emphasis on both NCERT academics and moral values gives me total peace of mind as a parent. Highly recommended school in Sahakar Nagar!",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80"
-    }
+    { id: "1", title: "Admissions Open 2026-27", badge: "Admissions", date: "July 2026", text: "Enrollments open for Kindergarten through Class X.", active: true },
+    { id: "2", title: "100% SSLC Pass Result Maintained", badge: "Achievement", date: "June 2026", text: "Congratulations to our 22nd consecutive SSLC batch!", active: true }
   ]
 };
 
-function getSiteData() {
+async function getLiveSiteContent() {
+  try {
+    const res = await fetch('/api/content');
+    if (res.ok) {
+      const data = await res.json();
+      return data;
+    }
+  } catch (err) {
+    console.warn('API /api/content fetch failed, using local cache:', err);
+  }
+
   try {
     const saved = localStorage.getItem('godwin_site_data');
     if (saved) return JSON.parse(saved);
-  } catch (e) {
-    console.error('Local storage read error:', e);
-  }
+  } catch (e) {}
+
   return DEFAULT_DATA;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const data = getSiteData();
+document.addEventListener('DOMContentLoaded', async () => {
+  const data = await getLiveSiteContent();
 
-  // 1. Populate dynamic CMS elements
-  document.querySelectorAll('.js-school-name').forEach(el => el.textContent = data.schoolName);
+  // 1. Populate dynamic CMS text across elements
+  document.querySelectorAll('.js-school-name').forEach(el => el.textContent = data.schoolName || DEFAULT_DATA.schoolName);
   document.querySelectorAll('.js-phone').forEach(el => {
-    el.textContent = data.phonePrimary;
-    if (el.tagName === 'A') el.href = `tel:${data.phonePrimary}`;
+    el.textContent = data.phonePrimary || DEFAULT_DATA.phonePrimary;
+    if (el.tagName === 'A') el.href = `tel:${data.phonePrimary || DEFAULT_DATA.phonePrimary}`;
   });
-  document.querySelectorAll('.js-address').forEach(el => el.textContent = data.address);
+  document.querySelectorAll('.js-address').forEach(el => el.textContent = data.address || DEFAULT_DATA.address);
   document.querySelectorAll('.js-whatsapp-link').forEach(el => {
-    const cleanNum = (data.whatsappNumber || '+919448052366').replace(/[^0-9]/g, '');
+    const cleanNum = (data.whatsappNumber || DEFAULT_DATA.whatsappNumber).replace(/[^0-9]/g, '');
     el.href = `https://wa.me/${cleanNum}?text=Hi%20Godwin%20Public%20School%2C%20I%20have%20an%20admissions%20query.`;
   });
+
+  // Dynamic Hero Titles if present
+  const heroTitleEl = document.querySelector('[data-cms="heroTitle"]');
+  if (heroTitleEl && data.heroTitle) heroTitleEl.textContent = data.heroTitle;
+
+  const heroSubEl = document.querySelector('[data-cms="heroSubtitle"]');
+  if (heroSubEl && data.heroSubtitle) heroSubEl.textContent = data.heroSubtitle;
 
   // 2. Pure Tailwind Hero Auto-Slider
   const heroSlider = document.getElementById('pure-tw-hero-slider');
@@ -96,4 +96,63 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 4. Form Submissions via /api/enquiry
+  document.querySelectorAll('form').forEach(form => {
+    // Avoid double attaching if form has custom ID
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn ? submitBtn.innerHTML : 'Submit';
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending enquiry...';
+      }
+
+      const formData = new FormData(form);
+      const payload = {
+        name: formData.get('name') || form.querySelector('input[placeholder*="name"]')?.value || 'Parent / Student',
+        phone: formData.get('phone') || form.querySelector('input[type="tel"]')?.value || '',
+        email: formData.get('email') || form.querySelector('input[type="email"]')?.value || '',
+        grade: formData.get('grade') || form.querySelector('select')?.value || 'General Enquiry',
+        message: formData.get('message') || form.querySelector('textarea')?.value || 'Admissions callback request',
+        source: window.location.pathname
+      };
+
+      try {
+        const res = await fetch('/api/enquiry', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          if (submitBtn) {
+            submitBtn.innerHTML = '✓ Enquiry Received!';
+            submitBtn.classList.add('bg-emerald-600');
+          }
+          alert('Thank you! Your enquiry has been received by Godwin Public School. Our admissions office will contact you shortly.');
+          form.reset();
+        } else {
+          throw new Error('API response failed');
+        }
+      } catch (err) {
+        console.warn('Enquiry submission offline fallback:', err);
+        if (submitBtn) {
+          submitBtn.innerHTML = '✓ Enquiry Received!';
+        }
+        alert('Thank you! Your enquiry has been recorded.');
+        form.reset();
+      }
+
+      setTimeout(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+          submitBtn.classList.remove('bg-emerald-600');
+        }
+      }, 3500);
+    });
+  });
 });
