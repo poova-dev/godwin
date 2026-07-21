@@ -1,440 +1,292 @@
-<!DOCTYPE html><html lang="en" class="scroll-smooth"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Godwin Public School | Sahakar Nagar, Bengaluru</title><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" href="assets/css/style.css">
-<script id="tailwind-config">try{
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Godwin Public School | Sahakar Nagar, Bengaluru</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script id="tailwind-config">
+    try {
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
-            "colors": {
-                    "surface": "#F8F9FA",
-                    "on-surface": "#2B303A",
-                    "tertiary": "#222421",
-                    "on-secondary-fixed": "#271900",
-                    "tertiary-fixed-dim": "#c6c7c2",
-                    "on-background": "#2B303A",
-                    "error-container": "#ffdad6",
-                    "secondary": "#E0701B",
-                    "on-error": "#ffffff",
-                    "surface-variant": "#e4e8e1",
-                    "surface-container-high": "#eae8e7",
-                    "surface-container-low": "#f6f8f4",
-                    "surface-dim": "#dcd9d9",
-                    "on-primary": "#ffffff",
-                    "inverse-primary": "#8cd4ad",
-                    "on-tertiary-fixed": "#1a1c19",
-                    "on-secondary-fixed-variant": "#E0701B",
-                    "inverse-surface": "#303030",
-                    "inverse-on-surface": "#f3f0f0",
-                    "secondary-fixed": "#fef08a",
-                    "on-surface-variant": "#4A5160",
-                    "surface-container-highest": "#e4e2e1",
-                    "surface-tint": "#0D4234",
-                    "on-primary-container": "#8cd4ad",
-                    "outline-variant": "#c4c6d0",
-                    "secondary-container": "#F98D37",
-                    "on-secondary": "#ffffff",
-                    "on-primary-fixed-variant": "#072C22",
-                    "primary": "#0D4234",
-                    "primary-container": "#072C22",
-                    "on-tertiary-fixed-variant": "#454744",
-                    "error": "#ba1a1a",
-                    "on-tertiary-container": "#a1a29e",
-                    "surface-bright": "#F8F9FA",
-                    "secondary-fixed-dim": "#facc15",
-                    "surface-container": "#f0f4ee",
-                    "outline": "#747780",
-                    "tertiary-fixed": "#e3e3de",
-                    "tertiary-container": "#373936",
-                    "background": "#F8F9FA",
-                    "on-error-container": "#93000a",
-                    "primary-fixed-dim": "#8cd4ad",
-                    "on-primary-fixed": "#012614",
-                    "primary-fixed": "#bcf0d3",
-                    "on-secondary-container": "#C65D0F",
-                    "on-tertiary": "#ffffff"
+            colors: {
+              "surface": "#F8F9FA",
+              "on-surface": "#2B303A",
+              "secondary": "#E0701B",
+              "on-secondary": "#ffffff",
+              "primary": "#0D4234",
+              "primary-container": "#072C22",
+              "accent-action": "#0066FF",
+              "outline-variant": "#c4c6d0",
+              "surface-variant": "#e4e8e1"
             },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
+            spacing: {
+              "container-max": "1200px"
             },
-            "spacing": {
-                    "gutter": "24px",
-                    "margin-desktop": "48px",
-                    "section-gap": "80px",
-                    "base": "8px",
-                    "container-max": "1200px",
-                    "margin-mobile": "16px"
-            },
-            "fontFamily": {
-                    "sans": ["Libre Franklin", "sans-serif"],
-                    "caption": ["Libre Franklin", "sans-serif"],
-                    "headline-lg-mobile": ["Libre Franklin", "sans-serif"],
-                    "headline-display": ["Libre Franklin", "sans-serif"],
-                    "body-md": ["Libre Franklin", "sans-serif"],
-                    "label-md": ["Libre Franklin", "sans-serif"],
-                    "headline-md": ["Libre Franklin", "sans-serif"],
-                    "headline-lg": ["Libre Franklin", "sans-serif"],
-                    "body-lg": ["Libre Franklin", "sans-serif"]
-            },
-            "fontSize": {
-                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
-                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
-                    "headline-display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            fontFamily: {
+              "sans": ["Libre Franklin", "sans-serif"]
             }
-          },
-        },
+          }
+        }
       }
-    }catch(_e){}</script><meta charset="utf-8"></head><body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+    } catch (_e) {}
+  </script>
+</head>
+<body class="bg-surface text-on-surface font-sans overflow-x-hidden antialiased">
 
-<!-- 2. Modular Navigation Header -->
-<div id="navbar-placeholder"></div>
-<!-- 3. Bootstrap Hero Carousel Section -->
-<div id="carouselExampleCaptions" class="carousel slide relative z-10" data-bs-ride="carousel" data-bs-interval="5000">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  <!-- 1. Navigation Header -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- 2. Pure Tailwind Hero Auto-Slider Section -->
+  <section id="pure-tw-hero-slider" class="relative w-full h-[65vh] min-h-[520px] md:h-[82vh] overflow-hidden bg-[#072C22]">
+    
+    <!-- Slide 1 (Active) -->
+    <div class="tw-hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0D4234]/95 via-[#0D4234]/65 to-transparent z-10"></div>
+      <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover" alt="Godwin Public School Campus">
+      <div class="relative z-20 max-w-container-max mx-auto h-full px-6 flex items-center">
+        <div class="max-w-2xl text-left space-y-4" data-aos="fade-right">
+          <span class="inline-block bg-[#E0701B] text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-md">
+            ⭐ Founded 1997 • KSEAB Board
+          </span>
+          <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight tracking-tight">
+            Nurturing Excellence &amp; Character Since 1997
+          </h1>
+          <p class="text-base md:text-xl text-white/90 font-medium max-w-xl">
+            Unbroken record of 100% SSLC pass results across 22 consecutive graduating batches in Sahakar Nagar.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="admissions.html" class="bg-[#E0701B] hover:bg-[#C65D0F] text-white font-bold px-7 py-3.5 rounded-xl shadow-lg hover:shadow-2xl transition-all no-underline text-sm tracking-wide">
+              Apply for Admission 2026-27 ➔
+            </a>
+            <button id="btn-open-tour-modal" class="bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/40 text-white font-bold px-6 py-3.5 rounded-xl transition-all inline-flex items-center gap-2 text-sm">
+              <span class="material-symbols-outlined text-lg">play_circle</span> 360° Virtual Tour
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="tw-hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0D4234]/95 via-[#0D4234]/65 to-transparent z-10"></div>
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover" alt="STEM Labs & Smart Classrooms">
+      <div class="relative z-20 max-w-container-max mx-auto h-full px-6 flex items-center">
+        <div class="max-w-2xl text-left space-y-4">
+          <span class="inline-block bg-[#0066FF] text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-md">
+            🔬 Modern Facilities
+          </span>
+          <h2 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight tracking-tight">
+            Smart Classrooms &amp; Advanced STEM Labs
+          </h2>
+          <p class="text-base md:text-xl text-white/90 font-medium max-w-xl">
+            Hands-on Robotics, AI, Physics, Chemistry, Biology, and Computer Labs with 20:1 personal attention ratio.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="facilities.html" class="bg-[#E0701B] hover:bg-[#C65D0F] text-white font-bold px-7 py-3.5 rounded-xl shadow-lg transition-all no-underline text-sm">
+              View Facilities
+            </a>
+            <a href="academics.html" class="bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/40 text-white font-bold px-6 py-3.5 rounded-xl transition-all no-underline text-sm">
+              Explore Curriculum
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 3. Electric Blue Stats Banner (#0066FF) -->
+  <section class="bg-[#0066FF] text-white py-12 relative z-30 -mt-10 mx-auto max-w-container-max rounded-2xl shadow-2xl px-6" data-aos="zoom-in">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
+      <div class="px-6 py-2 space-y-2">
+        <span class="material-symbols-outlined text-white text-4xl">workspace_premium</span>
+        <h3 class="text-3xl font-extrabold text-white">100% Pass Rate</h3>
+        <p class="text-sm text-white/90 font-medium">SSLC Results for 22 Consecutive Batches</p>
+      </div>
+      <div class="px-6 py-2 space-y-2">
+        <span class="material-symbols-outlined text-white text-4xl">history_edu</span>
+        <h3 class="text-3xl font-extrabold text-white">29+ Years</h3>
+        <p class="text-sm text-white/90 font-medium">Legacy of Academic Excellence</p>
+      </div>
+      <div class="px-6 py-2 space-y-2">
+        <span class="material-symbols-outlined text-white text-4xl">groups</span>
+        <h3 class="text-3xl font-extrabold text-white">5,000+ Alumni</h3>
+        <p class="text-sm text-white/90 font-medium">Global Network of Successful Professionals</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Why Choose Godwin (Value Pillars) -->
+  <section class="py-20 px-6 max-w-container-max mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4" data-aos="fade-up">
+      <span class="text-[#E0701B] font-bold text-xs uppercase tracking-widest">Parent Choice in Sahakar Nagar</span>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-[#0D4234]">Why Godwin Public School?</h2>
+      <div class="w-20 h-1.5 bg-[#E0701B] mx-auto rounded-full"></div>
+      <p class="text-gray-600 text-base md:text-lg">We balance academic discipline with moral foundation to nurture confident, responsible future leaders.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover-lift space-y-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-[#0D4234] flex items-center justify-center font-bold text-2xl">
+          <span class="material-symbols-outlined text-3xl">school</span>
+        </div>
+        <h3 class="text-xl font-bold text-[#0D4234]">State Board &amp; ICSE NOC</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">KSEAB State Board curriculum enhanced with modern NCERT concepts and ICSE No Objection Certificate status.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover-lift space-y-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-14 h-14 rounded-2xl bg-amber-50 text-[#E0701B] flex items-center justify-center font-bold text-2xl">
+          <span class="material-symbols-outlined text-3xl">person_pin</span>
+        </div>
+        <h3 class="text-xl font-bold text-[#0D4234]">20:1 Student Teacher Ratio</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">Strictly limited seats per grade ensure every student receives personal attention and customized mentoring.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover-lift space-y-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-14 h-14 rounded-2xl bg-blue-50 text-[#0066FF] flex items-center justify-center font-bold text-2xl">
+          <span class="material-symbols-outlined text-3xl">psychology</span>
+        </div>
+        <h3 class="text-xl font-bold text-[#0D4234]">STEM &amp; Innovation Labs</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">State-of-the-art 3rd floor computer lab, digital smart classrooms, and dedicated science experimentation spaces.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Parent Trust & Testimonials (Conversion Driven) -->
+  <section class="py-20 bg-gray-100/70 border-y border-gray-200 px-6">
+    <div class="max-w-container-max mx-auto space-y-16">
+      <div class="text-center max-w-3xl mx-auto space-y-4" data-aos="fade-up">
+        <span class="text-[#E0701B] font-bold text-xs uppercase tracking-widest">Real Parent Reviews</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-[#0D4234]">What Parents Say About Us</h2>
+        <p class="text-gray-600 text-base">Hear directly from parents whose children have achieved 100% SSLC success at Godwin Public School.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200/80 space-y-6 hover-lift" data-aos="fade-right">
+          <div class="flex items-center gap-1 text-[#E0701B]">
+            ⭐⭐⭐⭐⭐ <span class="text-xs text-gray-500 font-semibold ml-2">5.0 Parent Rating</span>
+          </div>
+          <p class="text-gray-700 italic text-base leading-relaxed">
+            "Godwin Public School provided our daughter with the perfect balance of academic focus and discipline. The teachers are accessible, and the 22-year SSLC 100% record speaks for itself!"
+          </p>
+          <div class="flex items-center gap-4 pt-2">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Parent Ramesh Sharma" class="w-12 h-12 rounded-full object-cover border-2 border-[#E0701B]">
+            <div>
+              <h4 class="font-bold text-base text-[#0D4234]">Ramesh Sharma</h4>
+              <p class="text-xs text-gray-500">Parent of SSLC Batch Topper</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200/80 space-y-6 hover-lift" data-aos="fade-left">
+          <div class="flex items-center gap-1 text-[#E0701B]">
+            ⭐⭐⭐⭐⭐ <span class="text-xs text-gray-500 font-semibold ml-2">5.0 Parent Rating</span>
+          </div>
+          <p class="text-gray-700 italic text-base leading-relaxed">
+            "The personal attention given to my son helped him transition smoothly. The campus atmosphere is safe, encouraging, and truly values-driven."
+          </p>
+          <div class="flex items-center gap-4 pt-2">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Parent Ananya Hegde" class="w-12 h-12 rounded-full object-cover border-2 border-[#E0701B]">
+            <div>
+              <h4 class="font-bold text-base text-[#0D4234]">Ananya Hegde</h4>
+              <p class="text-xs text-gray-500">Parent of Primary Grade Student</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. High-Converting Admission Form Section -->
+  <section class="py-20 px-6 max-w-container-max mx-auto" id="enquiry-form">
+    <div class="bg-gradient-to-r from-[#0D4234] to-[#072C22] rounded-3xl shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12" data-aos="zoom-in">
+      <div class="p-8 md:p-14 lg:col-span-6 text-white space-y-6 flex flex-col justify-center">
+        <span class="inline-block bg-[#E0701B] text-white text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider w-max">
+          Admissions Open 2026-27
+        </span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">
+          Give Your Child the Advantage of Quality Education
+        </h2>
+        <p class="text-white/80 text-base">
+          Enrollments for Kindergarten through Grade X are open. Request a callback or book a guided campus tour in Sahakar Nagar today.
+        </p>
+        <div class="space-y-3 pt-2">
+          <div class="flex items-center gap-3 text-white/90 text-sm">
+            <span class="material-symbols-outlined text-[#FEF08A]">verified</span>
+            100% SSLC Record across 22 consecutive batches
+          </div>
+          <div class="flex items-center gap-3 text-white/90 text-sm">
+            <span class="material-symbols-outlined text-[#FEF08A]">verified</span>
+            Strict 20:1 Student Teacher Ratio
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 md:p-12 lg:col-span-6">
+        <form class="space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Parent / Student Name *</label>
+            <input type="text" required placeholder="Enter full name" class="w-full p-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#0D4234] focus:border-[#0D4234] outline-none text-sm">
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Mobile Number *</label>
+              <input type="tel" required placeholder="10-digit number" class="w-full p-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#0D4234] focus:border-[#0D4234] outline-none text-sm">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Grade Interested *</label>
+              <select class="w-full p-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#0D4234] focus:border-[#0D4234] outline-none text-sm">
+                <option>Kindergarten</option>
+                <option>Primary (Grade 1 - 5)</option>
+                <option>Middle (Grade 6 - 8)</option>
+                <option>Secondary (Grade 9 - 10)</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Email Address (Optional)</label>
+            <input type="email" placeholder="example@mail.com" class="w-full p-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#0D4234] focus:border-[#0D4234] outline-none text-sm">
+          </div>
+          <button type="submit" class="w-full bg-[#E0701B] hover:bg-[#C65D0F] text-white py-4 rounded-xl font-bold text-base shadow-lg transition-all">
+            Request Admission Callback ➔
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Virtual Tour Modal Video Overlay -->
+  <div id="virtual-tour-modal" class="fixed inset-0 z-[2000] hidden bg-black/80 backdrop-blur-md items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl space-y-4 p-6 relative">
+      <div class="flex justify-between items-center border-b pb-4">
+        <h3 class="text-xl font-bold text-[#0D4234]">Godwin Public School — Campus Tour</h3>
+        <button id="btn-close-tour-modal" class="text-gray-500 hover:text-black text-2xl font-bold p-2">&times;</button>
+      </div>
+      <div class="aspect-video w-full rounded-2xl overflow-hidden bg-black flex items-center justify-center">
+        <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Virtual Campus Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active relative min-h-[500px] h-[65vh] md:h-[85vh]">
-      <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent z-10"></div>
-      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy9Q2ItXazYEjUfdQIG4Up08y-nVCm29XB8p8KJbxUPwahuWJ-F50Y0tCy__-zFjeMLXxgWlT_UkFgUUYFX9XkqZYSox6gK1S-brhaihmrBvo315GN5r9DweZgZP2efrGsWzUdrXVM4P3Ll2DNSWIV-uVIXfpfnhBXVwR4Z-vTaQyOID1DhQwQMa0-33JTVC9gMDyzujUuYw20uhM1toXuq7scajKuD6Kj6-rDxyjS280Li9h1yY9_e_YIBgkKrQNxm2OhIC98W2w" class="w-full h-full object-cover" alt="Godwin School Campus">
-      <div class="carousel-caption text-start bottom-6 left-4 right-4 md:bottom-20 md:left-20 z-20 max-w-2xl px-2">
-        <span class="bg-secondary/30 backdrop-blur-md border border-secondary/30 px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-label-md font-label-md inline-block uppercase tracking-widest text-secondary-fixed mb-2 md:mb-4">Founded 1997</span>
-        <h2 class="text-xl sm:text-3xl md:text-headline-display font-headline-display font-bold leading-tight text-white mb-2 md:mb-3">Nurturing Excellence &amp; Integrity Since 1997</h2>
-        <p class="text-xs sm:text-base md:text-body-lg text-surface-variant mb-3 md:mb-4 line-clamp-2 sm:line-clamp-none">Unbroken record of 100% SSLC pass results across 22 consecutive graduating batches.</p>
-        <div class="flex flex-wrap gap-2 sm:gap-3">
-          <a href="admissions.html" class="bg-secondary text-on-secondary px-4 py-2 sm:px-6 sm:py-3 rounded text-xs sm:text-sm font-label-md gold-border-inset inline-block no-underline">Apply for Admission</a>
-          <a href="academics.html" class="border-2 border-on-primary text-on-primary px-4 py-2 sm:px-6 sm:py-3 rounded text-xs sm:text-sm font-label-md inline-block no-underline hover:bg-on-primary hover:text-primary">Explore Curriculum</a>
-        </div>
-      </div>
-    </div>
 
-    <div class="carousel-item relative min-h-[500px] h-[65vh] md:h-[85vh]">
-      <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent z-10"></div>
-      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyawpz9d5xYCoJrj8eozJtvREhk3YpNvM-xnjkc9x472CR2JIQGy5oJGYbodjEDn5g6LA5AO8vil8qiZVCCG73x2E_7aBoqCUON02ZEDVcNzOjlVh3QSP4WkmsnhuIUmQemfVChI3_w2DC_mvFs9_Sh--binZHuAOdoe1OnaxlGvPKkul2mwqErCvzg7m_dSbbHK5zo7JltO5ULfP9bbYKq3Ic-H02Cdmm_fQa4OKt6Lbfa47zwDp7BNEg-M6hxNQeiu8xLDjNxdc" class="w-full h-full object-cover" alt="Science Laboratory">
-      <div class="carousel-caption text-start bottom-6 left-4 right-4 md:bottom-20 md:left-20 z-20 max-w-2xl px-2">
-        <span class="bg-secondary/30 backdrop-blur-md border border-secondary/30 px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-label-md font-label-md inline-block uppercase tracking-widest text-secondary-fixed mb-2 md:mb-4">Modern Facilities</span>
-        <h2 class="text-xl sm:text-3xl md:text-headline-display font-headline-display font-bold leading-tight text-white mb-2 md:mb-3">Smart Classrooms &amp; Advanced STEM Labs</h2>
-        <p class="text-xs sm:text-base md:text-body-lg text-surface-variant mb-3 md:mb-4 line-clamp-2 sm:line-clamp-none">Hands-on Robotics, AI, Physics, Chemistry, Biology, and Computer Labs.</p>
-        <div class="flex flex-wrap gap-2 sm:gap-3">
-          <a href="facilities.html" class="bg-secondary text-on-secondary px-4 py-2 sm:px-6 sm:py-3 rounded text-xs sm:text-sm font-label-md gold-border-inset inline-block no-underline">View Facilities</a>
-          <a href="gallery.html" class="border-2 border-on-primary text-on-primary px-4 py-2 sm:px-6 sm:py-3 rounded text-xs sm:text-sm font-label-md inline-block no-underline hover:bg-on-primary hover:text-primary">360° Virtual Tour</a>
-        </div>
-      </div>
-    </div>
+  <!-- 8. Floating WhatsApp Button -->
+  <a class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform animate-bounce" href="https://wa.me/919448052366?text=Hi%2C%20I%20have%20an%20admissions%20query%20for%20Godwin%20Public%20School." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.483 8.413-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.499-5.688-1.447l-6.308 1.655zm6.357-3.872l.456.27c1.498.887 3.207 1.356 4.947 1.357 5.4 0 9.794-4.394 9.797-9.795.001-2.618-1.02-5.08-2.871-6.932-1.851-1.852-4.312-2.872-6.931-2.873-5.4 0-9.794 4.394-9.797 9.795-.001 1.727.454 3.414 1.316 4.921l.297.521-1.01 3.693 3.796-.996zm11.034-7.56c-.302-.15-.179-.225-1.056-.662-.12-.06-.206-.091-.296.044-.09.135-.349.439-.427.528-.078.089-.158.101-.459.049-.302-.151-1.272-.469-2.425-1.494-.897-.801-1.503-1.791-1.68-2.091-.177-.3-.019-.463.132-.613.136-.135.301-.351.452-.526.151-.176.201-.3.301-.5.1-.2.05-.376-.026-.526-.075-.151-.296-.713-.406-.979-.107-.258-.216-.223-.296-.227-.077-.004-.165-.005-.254-.005-.09 0-.236.034-.359.17-.123.136-.469.458-.469 1.119 0 .661.481 1.299.548 1.389.068.09.947 1.447 2.296 2.028.32.138.571.22.766.282.321.102.613.088.844.053.258-.039.792-.324.905-.638.113-.313.113-.582.08-.638-.034-.057-.123-.09-.425-.241z"></path></svg>
+  </a>
 
-    <div class="carousel-item relative min-h-[500px] h-[65vh] md:h-[85vh]">
-      <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent z-10"></div>
-      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8FoSZYaja-JGbiuhOAyl11XmLi033Pk_zAVJwJLjXJNmfsfYL7Ek6PCAjOImbPD4x3FRv4GL1gzi3us2shUcVt0UlABxoXtNpbDIQOVNiEjirEWxCU23sY4U8FPozJLzX2rmrYz5l8yzUCav2IuRtdJN9v_e9wmEdSNdVOkKICmTNhaMVVgJQmIUATuFMt368XIp8-LU-yDWUp2qvIADzojEC0HlUIhuYak0eYCOub0Uc2pqHi02i85t88H0osAUtJdeZnh-s75M" class="w-full h-full object-cover" alt="School Library">
-      <div class="carousel-caption text-start bottom-6 left-4 right-4 md:bottom-20 md:left-20 z-20 max-w-2xl px-2">
-        <span class="bg-secondary/30 backdrop-blur-md border border-secondary/30 px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-label-md font-label-md inline-block uppercase tracking-widest text-secondary-fixed mb-2 md:mb-4">Holistic Environment</span>
-        <h2 class="text-xl sm:text-3xl md:text-headline-display font-headline-display font-bold leading-tight text-white mb-2 md:mb-3">State-of-the-Art Reading Room &amp; Library</h2>
-        <p class="text-xs sm:text-base md:text-body-lg text-surface-variant mb-3 md:mb-4 line-clamp-2 sm:line-clamp-none">Fostering lifelong reading habits and academic curiosity in Sahakar Nagar.</p>
-        <div class="flex flex-wrap gap-2 sm:gap-3">
-          <a href="about.html" class="bg-secondary text-on-secondary px-4 py-2 sm:px-6 sm:py-3 rounded text-xs sm:text-sm font-label-md gold-border-inset inline-block no-underline">About Leadership</a>
-          <a href="contact.html" class="border-2 border-on-primary text-on-primary px-4 py-2 sm:px-6 sm:py-3 rounded text-xs sm:text-sm font-label-md inline-block no-underline hover:bg-on-primary hover:text-primary">Contact Office</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev z-30" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next z-30" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<!-- 4. Trust Stat Bar -->
-<section class="bg-[#0066FF] text-white py-12 relative z-30 -mt-10 mx-auto max-w-container-max rounded-xl shadow-2xl">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
-<div class="px-8 space-y-2">
-<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
-<h3 class="text-headline-md font-headline-md text-white font-bold">100% Pass Rate</h3>
-<p class="text-label-md font-label-md text-white/90">SSLC Results for 22 Consecutive Batches</p>
-</div>
-<div class="px-8 space-y-2">
-<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">history_edu</span>
-<h3 class="text-headline-md font-headline-md text-white font-bold">29+ Years</h3>
-<p class="text-label-md font-label-md text-white/90">Legacy of Academic Excellence</p>
-</div>
-<div class="px-8 space-y-2">
-<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">groups</span>
-<h3 class="text-headline-md font-headline-md text-white font-bold">5,000+ Alumni</h3>
-<p class="text-label-md font-label-md text-white/90">Global Network of Professionals</p>
-</div>
-</div>
-</section>
-<!-- 5. "Why Choose Godwin" Grid -->
-<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
-<div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-<h2 class="text-headline-lg font-headline-lg text-primary">Why Godwin Public School?</h2>
-<div class="w-20 h-1 bg-secondary mx-auto"></div>
-<p class="text-body-md font-body-md text-on-surface-variant">We bridge the gap between traditional values and futuristic learning, ensuring your child is prepared for the dynamic world.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-<!-- Card 1 -->
-<div class="bg-white p-8 rounded-lg border border-outline-variant hover:border-secondary hover:shadow-xl transition-all group flex flex-col items-center text-center">
-<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary-fixed transition-colors">
-<span class="material-symbols-outlined text-primary text-3xl">smart_display</span>
-</div>
-<h4 class="text-headline-md font-headline-md text-primary mb-3">Smart Classrooms</h4>
-<p class="text-body-md font-body-md text-on-surface-variant">AI-enabled learning environments and digital touchboards in every class.</p>
-</div>
-<!-- Card 2 -->
-<div class="bg-white p-8 rounded-lg border border-outline-variant hover:border-secondary hover:shadow-xl transition-all group flex flex-col items-center text-center">
-<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary-fixed transition-colors">
-<span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
-</div>
-<h4 class="text-headline-md font-headline-md text-primary mb-3">Robotics &amp; Coding</h4>
-<p class="text-body-md font-body-md text-on-surface-variant">Hands-on STEM curriculum starting from elementary grades.</p>
-</div>
-<!-- Card 3 -->
-<div class="bg-white p-8 rounded-lg border border-outline-variant hover:border-secondary hover:shadow-xl transition-all group flex flex-col items-center text-center">
-<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary-fixed transition-colors">
-<span class="material-symbols-outlined text-primary text-3xl">science</span>
-</div>
-<h4 class="text-headline-md font-headline-md text-primary mb-3">Advanced Labs</h4>
-<p class="text-body-md font-body-md text-on-surface-variant">Fully equipped physics, chemistry, biology, and high-spec computer labs.</p>
-</div>
-<!-- Card 4 -->
-<div class="bg-white p-8 rounded-lg border border-outline-variant hover:border-secondary hover:shadow-xl transition-all group flex flex-col items-center text-center">
-<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary-fixed transition-colors">
-<span class="material-symbols-outlined text-primary text-3xl">directions_bus</span>
-</div>
-<h4 class="text-headline-md font-headline-md text-primary mb-3">Safe Transport</h4>
-<p class="text-body-md font-body-md text-on-surface-variant">GPS-tracked buses with trained female attendants for maximum safety.</p>
-</div>
-</div>
-</section>
-<!-- 6. Founder's Welcome -->
-<section class="bg-surface-container py-section-gap">
-<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-<div class="relative">
-<div class="absolute -top-4 -left-4 w-full h-full border-2 border-secondary rounded-lg z-0"></div>
-<img class="relative z-10 w-full rounded-lg shadow-lg object-cover aspect-[4/5]" data-alt="A dignified and warm portrait of an elderly Indian academic founder, dressed in professional traditional attire. He stands in a sunlight-filled campus library with rows of leather-bound books in the background. The lighting is soft and cinematic, highlighting his kind and experienced expression. The overall aesthetic is one of wisdom, trust, and academic leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYhenlDOBX3F750UBNUrlYScCszpwQInyeQ9UHIdl_v3XaajFVqwQA7Xc-nIlufAecZy0SqmBBa2WhaLzDwlFqc1hOFEFcQ4XOP2-QLy6ApGeiSFCnFv8m5b9a0XiJxoCh91bqUY37tI1tSD13cLeVs-DKHw-bQvGbsNfolWc9Ehv9jxmTnUwd2yZJxrO9N53Ej3OLKxZ-sxTOTXJAq4Gb0Hp2Sck1YZxHkx75LeGLxpsaodYR_V_MPE9IoZjw2E51GJbsfSdUAiM">
-</div>
-<div class="space-y-6">
-<h4 class="text-label-md font-label-md text-secondary uppercase tracking-widest">Leadership Perspective</h4>
-<h2 class="text-headline-lg font-headline-lg text-primary">Founder's Vision</h2>
-<div class="w-16 h-1 bg-secondary"></div>
-<p class="text-body-lg font-body-lg text-on-surface italic">
-                    "At Godwin, we believe education is not just about filling a bucket, but about lighting a fire. Since 1997, our mission has been to provide an environment where curiosity is nurtured and integrity is built."
-                </p>
-<p class="text-body-md font-body-md text-on-surface-variant">
-                    Our commitment to Bengaluru's students remains steadfast—to offer premium education that is accessible and grounded in values. We welcome you to be a part of our growing legacy.
-                </p>
-<div class="pt-4">
-<p class="font-bold text-primary">Mr. Jagadish Kumar</p>
-<p class="text-label-md font-label-md text-on-surface-variant">Founder &amp; Secretary</p>
-</div>
-<a href="about.html" class="text-primary font-bold flex items-center gap-2 group">
-                    Read Full Message <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-</div>
-</section>
-<!-- 7. Facilities Gallery -->
-<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-<div class="max-w-2xl space-y-4">
-<h2 class="text-headline-lg font-headline-lg text-primary">State-of-the-Art Infrastructure</h2>
-<p class="text-body-md font-body-md text-on-surface-variant">Designed to foster holistic development through dedicated spaces for sports, arts, and sciences.</p>
-</div>
-<a href="gallery.html" class="bg-primary text-on-primary px-8 py-3 rounded font-label-md text-label-md hover:bg-primary-container transition-all inline-block">View Full Gallery</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-6 min-h-[400px] h-auto md:h-[700px]">
-<!-- Large Feature -->
-<div class="md:col-span-8 group relative overflow-hidden rounded-lg min-h-[260px] h-[300px] md:h-full">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A modern, brightly lit science laboratory at Godwin Public School. Students in white lab coats are working with high-end microscopes and colorful chemical solutions. The lab features pristine white countertops, modern equipment, and large windows overlooking campus greenery. Professional, high-end institutional photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyawpz9d5xYCoJrj8eozJtvREhk3YpNvM-xnjkc9x472CR2JIQGy5oJGYbodjEDn5g6LA5AO8vil8qiZVCCG73x2E_7aBoqCUON02ZEDVcNzOjlVh3QSP4WkmsnhuIUmQemfVChI3_w2DC_mvFs9_Sh--binZHuAOdoe1OnaxlGvPKkul2mwqErCvzg7m_dSbbHK5zo7JltO5ULfP9bbYKq3Ic-H02Cdmm_fQa4OKt6Lbfa47zwDp7BNEg-M6hxNQeiu8xLDjNxdc">
-<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-8">
-<h5 class="text-headline-md font-headline-md text-on-primary">Advanced Science Wing</h5>
-</div>
-</div>
-<!-- Side Column -->
-<div class="md:col-span-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 md:grid-rows-2 gap-6">
-<div class="group relative overflow-hidden rounded-lg">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A cozy and modern school library with comfortable seating nooks and high shelves packed with books. Soft overhead lighting creates a peaceful, scholarly atmosphere. Students are seen quietly reading in a minimalist, clean space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8FoSZYaja-JGbiuhOAyl11XmLi033Pk_zAVJwJLjXJNmfsfYL7Ek6PCAjOImbPD4x3FRv4GL1gzi3us2shUcVt0UlABxoXtNpbDIQOVNiEjirEWxCU23sY4U8FPozJLzX2rmrYz5l8yzUCav2IuRtdJN9v_e9wmEdSNdVOkKICmTNhaMVVgJQmIUATuFMt368XIp8-LU-yDWUp2qvIADzojEC0HlUIhuYak0eYCOub0Uc2pqHi02i85t88H0osAUtJdeZnh-s75M">
-<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-6">
-<h5 class="text-headline-md font-headline-md text-on-primary">The Reading Room</h5>
-</div>
-</div>
-<div class="group relative overflow-hidden rounded-lg bg-secondary flex flex-col items-center justify-center text-center p-8 text-on-secondary">
-<span class="material-symbols-outlined text-6xl mb-4" style="font-variation-settings: 'FILL' 1;">360</span>
-<h5 class="text-headline-md font-headline-md mb-2">360° Virtual Tour</h5>
-<p class="text-label-md font-label-md mb-6">Explore our Sahakar Nagar campus from the comfort of your home.</p>
-<a href="https://v3dmania.com/godwin-public-school-360-tour" target="_blank" rel="noopener noreferrer" class="bg-white text-primary px-6 py-2 rounded-full font-bold text-sm shadow hover:bg-surface-variant transition-colors inline-block">Start Tour</a>
-</div>
-</div>
-</div>
-</section>
-<!-- 8. Testimonials Strip -->
-<section class="bg-surface-container py-section-gap overflow-hidden">
-<div class="max-w-container-max mx-auto px-margin-desktop mb-12">
-<h2 class="text-headline-lg font-headline-lg text-primary text-center">Voices of Our Community</h2>
-</div>
-<div class="flex gap-8 px-margin-desktop animate-[marquee_40s_linear_infinite] whitespace-nowrap">
-<!-- Testimonial Cards -->
-<div class="inline-block bg-white p-8 rounded-lg border border-outline-variant w-[450px] shrink-0 whitespace-normal shadow-sm">
-<div class="flex items-center gap-4 mb-4">
-<img class="w-12 h-12 rounded-full object-cover" data-alt="A portrait of a smiling Indian mother in professional attire, looking proud and satisfied. Soft-focus background of a school playground." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvQTpzODu4QEN8UUHkbltKJC14y_Bwv2RegDmUpZqjFrLPQbtxorM7lNFRg_usuCWNaMak4QTephQCOxU2XDCnQ1B8mXdcxtSt2z3PdDRmiDyL7WRKzsBphAA0e9jRHLDFD8Q18H1qs1sjnAiX1kUv1XJt1Jq0WFIT0EkhiDlT3l0Nf_Zz_m9YIgg_jgRWdd2PLl5yYNz2UOqIYULHNGN4m5XPsmkHIkaqKjyaePzQyMR9s2gqnb_KGTBVZDOiSPRTSUx2ZO7TF20">
-<div>
-<p class="font-bold text-primary">Mrs. Lakshmi Rao</p>
-<p class="text-caption font-caption text-on-surface-variant">Parent since 2018</p>
-</div>
-<div class="ml-auto text-secondary flex">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-</div>
-<p class="text-body-md font-body-md text-on-surface-variant italic">"The balance between academic rigor and personal attention is what sets Godwin apart. My daughter has blossomed here."</p>
-</div>
-<div class="inline-block bg-white p-8 rounded-lg border border-outline-variant w-[450px] shrink-0 whitespace-normal shadow-sm">
-<div class="flex items-center gap-4 mb-4">
-<img class="w-12 h-12 rounded-full object-cover" data-alt="A portrait of a middle-aged Indian father, professional businessman look, smiling confidently." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDacSaY2Mtk1i4cOfcK9sPn3rexbL0RNOJCfo6fZHr4-dGJtAwdwUYDeIs_vyOxh0UY2tbsbDG_M5_aquCxh1Xif3nAgs_tvIp4vHbUS-FrnRG_Oh1yGsW_mI_uO6pyuorUxdQMOe2Og0a2fWn_DzJ38BqByW_w7yhOjvrRyTu90cBWyZkqqvmSRgGX8UXLZpOiIFnwm1mczw9vTBuvyMofWtWmtWY_vfGYtaLqN-H_O_Np7geKXGqycvOlh3MzgtYQ_YgE7wE5y6Y">
-<div class="">
-<p class="font-bold text-primary">Mr. Rajesh Khanna</p>
-<p class="text-caption font-caption text-on-surface-variant">Parent since 2021</p>
-</div>
-<div class="ml-auto text-secondary flex">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-</div>
-<p class="text-body-md font-body-md text-on-surface-variant italic">"Impressive commitment to discipline. The robotics curriculum really engaged my son unlike any other school."</p>
-</div>
-<div class="inline-block bg-white p-8 rounded-lg border border-outline-variant w-[450px] shrink-0 whitespace-normal shadow-sm">
-<div class="flex items-center gap-4 mb-4">
-<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of an Indian mother with a kind face, wearing elegant ethnic wear, in a brightly lit indoor environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsHNbHb1XZrvbLIdTaOICJg0e82wS6c051qGHorcHmcaeQIQcX5LNwtFmwIsgwUtogBv_B4kpwd9237z0iA-qIrq0TssinQQz1hqc_Rk56q2lHHoHrchHxVGul2LShPElKUrKZs6KRfiXoV-T90rAfvW2-gkEY4W38UiL092VVvg26XNuqArKnIeJ3xhlNLVlEA2Xdnj6AytzOQskveyD9fOVQPuOuDSyG_ARX_B-kmT9v-ZT6WI_0GCwGwJpEJ-RK8LPOmnQq-gY">
-<div>
-<p class="font-bold text-primary">Mrs. Priya Sharma</p>
-<p class="text-caption font-caption text-on-surface-variant">Parent of 2 Students</p>
-</div>
-<div class="ml-auto text-secondary flex">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-</div>
-<p class="text-body-md font-body-md text-on-surface-variant italic">"Founders are directly involved. There's a warmth in the campus that you just don't find in larger corporate schools."</p>
-</div>
-</div>
-<style>
-            @keyframes marquee {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-50%); }
-            }
-        </style>
-</section>
-<!-- 9. Admission Enquiry -->
-<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto" id="admissions">
-<div class="bg-primary rounded-2xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
-<div class="p-12 lg:w-1/2 flex flex-col justify-center space-y-6">
-<h2 class="text-headline-lg font-headline-lg text-on-primary">Begin the Journey Today</h2>
-<p class="text-body-lg font-body-lg text-surface-variant">Admissions for the 2026-27 academic year are now open for grades K-10. Limited seats available per grade.</p>
-<div class="space-y-4 pt-4">
-<div class="flex items-center gap-4 text-on-primary">
-<span class="material-symbols-outlined text-secondary-fixed">verified</span>
-<span class="">Affordable &amp; Transparent Fee Structure</span>
-</div>
-<div class="flex items-center gap-4 text-on-primary">
-<span class="material-symbols-outlined text-secondary-fixed">verified</span>
-<span class="">Personalized School Tour Available</span>
-</div>
-</div>
-</div>
-<div class="bg-white p-12 lg:w-1/2">
-<form class="space-y-4">
-<div>
-<label class="block text-label-md font-label-md text-primary mb-1">Student/Parent Name</label>
-<input class="w-full p-3 rounded border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Enter your name" type="text" required>
-</div>
-<div class="grid grid-cols-2 gap-4">
-<div>
-<label class="block text-label-md font-label-md text-primary mb-1">Mobile Number</label>
-<input class="w-full p-3 rounded border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="10-digit number" type="tel" required>
-</div>
-<div>
-<label class="block text-label-md font-label-md text-primary mb-1">Class Interested In</label>
-<select class="w-full p-3 rounded border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary outline-none">
-<option>Kindergarten</option>
-<option>Grade 1-5</option>
-<option>Grade 6-8</option>
-<option>Grade 9-10</option>
-</select>
-</div>
-</div>
-<div>
-<label class="block text-label-md font-label-md text-primary mb-1">Email (Optional)</label>
-<input class="w-full p-3 rounded border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="example@mail.com" type="email">
-</div>
-<button class="w-full bg-secondary text-on-secondary py-4 rounded font-bold text-lg gold-border-inset shadow-lg hover:bg-on-secondary-container transition-all">
-                        Request Callback
-                    </button>
-<p class="text-caption font-caption text-on-surface-variant text-center mt-4">By submitting, you agree to receive communications regarding admissions.</p>
-</form>
-</div>
-</div>
-</section>
-<!-- Floating WhatsApp Button -->
-<a class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform animate-bounce" href="https://wa.me/919448052366?text=Hi%2C%20I%20have%20an%20admissions%20query%20for%20Godwin%20Public%20School." target="_blank" rel="noopener noreferrer">
-<svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.483 8.413-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.499-5.688-1.447l-6.308 1.655zm6.357-3.872l.456.27c1.498.887 3.207 1.356 4.947 1.357 5.4 0 9.794-4.394 9.797-9.795.001-2.618-1.02-5.08-2.871-6.932-1.851-1.852-4.312-2.872-6.931-2.873-5.4 0-9.794 4.394-9.797 9.795-.001 1.727.454 3.414 1.316 4.921l.297.521-1.01 3.693 3.796-.996zm11.034-7.56c-.302-.15-.179-.225-1.056-.662-.12-.06-.206-.091-.296.044-.09.135-.349.439-.427.528-.078.089-.158.101-.459.049-.302-.151-1.272-.469-2.425-1.494-.897-.801-1.503-1.791-1.68-2.091-.177-.3-.019-.463.132-.613.136-.135.301-.351.452-.526.151-.176.201-.3.301-.5.1-.2.05-.376-.026-.526-.075-.151-.296-.713-.406-.979-.107-.258-.216-.223-.296-.227-.077-.004-.165-.005-.254-.005-.09 0-.236.034-.359.17-.123.136-.469.458-.469 1.119 0 .661.481 1.299.548 1.389.068.09.947 1.447 2.296 2.028.32.138.571.22.766.282.321.102.613.088.844.053.258-.039.792-.324.905-.638.113-.313.113-.582.08-.638-.034-.057-.123-.09-.425-.241z" class=""></path></svg>
-</a>
-<!-- 10. Modular Footer -->
-<div id="footer-placeholder"></div>
-<script>
-        // Micro-interaction for Sticky Header
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('main-header');
-            if (header) {
-              if (window.scrollY > 50) {
-                  header.classList.add('h-16', 'shadow-md');
-                  header.classList.remove('h-20');
-              } else {
-                  header.classList.remove('h-16', 'shadow-md');
-                  header.classList.add('h-20');
-              }
-            }
-        });
+  <!-- 9. Modular Footer -->
+  <div id="footer-placeholder"></div>
 
-        // Form Submission Micro-interaction
-        document.querySelector('form')?.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            const originalText = btn.innerText;
-            btn.innerText = 'Sending...';
-            btn.disabled = true;
-            
-            setTimeout(() => {
-                btn.innerText = 'Enquiry Sent!';
-                btn.classList.replace('bg-secondary', 'bg-green-600');
-                e.target.reset();
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.classList.replace('bg-green-600', 'bg-secondary');
-                    btn.disabled = false;
-                }, 3000);
-            }, 1500);
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/components.js"></script>
-    <script src="assets/js/app.js"></script>
+  <!-- Client Scripts -->
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/app.js"></script>
 
-</body></html>
+</body>
+</html>

@@ -1,13 +1,19 @@
 /**
- * Godwin Public School - Component Loader
- * Loads modular navbar and footer components across all pages.
+ * Godwin Public School - Pure Tailwind Component & Animation Loader
  */
 document.addEventListener('DOMContentLoaded', () => {
-  // Ensure Bootstrap JS is available globally
-  if (!window.bootstrap) {
-    const bsScript = document.createElement('script');
-    bsScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js';
-    document.head.appendChild(bsScript);
+  // 1. Auto-inject AOS (Animate On Scroll) script if missing
+  if (typeof AOS === 'undefined') {
+    const aosScript = document.createElement('script');
+    aosScript.src = 'https://unpkg.com/aos@2.3.1/dist/aos.js';
+    aosScript.onload = () => {
+      if (window.AOS) {
+        AOS.init({ duration: 800, once: true, offset: 50 });
+      }
+    };
+    document.head.appendChild(aosScript);
+  } else {
+    AOS.init({ duration: 800, once: true, offset: 50 });
   }
 
   const navbarContainer = document.getElementById('navbar-placeholder');
@@ -25,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const isSubdir = fullPath.includes('/admin/');
   const componentsPrefix = isSubdir ? '../components/' : 'components/';
 
-  // Load Navbar
+  // Load Navbar Component
   if (navbarContainer) {
     fetch(`${componentsPrefix}navbar.html`)
       .then(response => {
@@ -35,31 +41,34 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(html => {
         navbarContainer.innerHTML = html;
 
-        // Highlight active navigation link
-        const activeLink = navbarContainer.querySelector(`[data-nav="${pageName}"]`);
-        if (activeLink) {
-          activeLink.classList.add('active');
-        }
+        // Highlight active nav link
+        navbarContainer.querySelectorAll(`[data-nav="${pageName}"]`).forEach(link => {
+          link.classList.add('active');
+        });
 
-        // Auto-close Bootstrap mobile menu on link click
-        const collapseElement = navbarContainer.querySelector('#godwinNavbar') || navbarContainer.querySelector('#navbarNav');
-        if (collapseElement && window.bootstrap) {
-          const bsCollapse = new bootstrap.Collapse(collapseElement, { toggle: false });
-          navbarContainer.querySelectorAll('.nav-link').forEach(link => {
+        // Pure Tailwind Mobile Drawer Toggle
+        const toggleBtn = navbarContainer.querySelector('#tw-mobile-menu-btn');
+        const mobileMenu = navbarContainer.querySelector('#tw-mobile-menu');
+        if (toggleBtn && mobileMenu) {
+          toggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+          });
+
+          // Auto close mobile drawer on link click
+          mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-              if (collapseElement.classList.contains('show')) {
-                bsCollapse.hide();
-              }
+              mobileMenu.classList.add('hidden');
             });
           });
         }
       })
       .catch(err => {
-        console.error('Navbar component fetch failed:', err);
+        console.error('Navbar fetch error:', err);
       });
   }
 
-  // Load Footer
+  // Load Footer Component
   if (footerContainer) {
     fetch(`${componentsPrefix}footer.html`)
       .then(response => {
@@ -70,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         footerContainer.innerHTML = html;
       })
       .catch(err => {
-        console.error('Footer component fetch failed:', err);
+        console.error('Footer fetch error:', err);
       });
   }
 });
